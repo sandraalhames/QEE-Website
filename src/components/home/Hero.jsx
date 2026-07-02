@@ -1,6 +1,7 @@
 import Container from '../ui/Container';
 import Button from '../ui/Button';
 import QuantumField from './QuantumField';
+import Countdown from './Countdown';
 import event from '../../content/event';
 import styles from './Hero.module.css';
 
@@ -25,6 +26,7 @@ const Hero = () => (
         {event.finalEventDateLabel}
         .
       </p>
+      <Countdown />
       <div className={styles.actions}>
         <Button to="/registration" variant="glow">Register interest</Button>
         <Button to="/schedule" variant="ghost">View schedule</Button>

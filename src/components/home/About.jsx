@@ -1,9 +1,10 @@
 import Container from '../ui/Container';
 import SectionHeading from '../ui/SectionHeading';
+import useReveal from '../../hooks/useReveal';
 import styles from './About.module.css';
 
 const About = () => (
-  <section className={styles.section}>
+  <section className={styles.section} ref={useReveal()}>
     <Container>
       <SectionHeading
         eyebrow="About"

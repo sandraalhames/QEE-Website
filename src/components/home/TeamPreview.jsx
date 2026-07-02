@@ -1,10 +1,11 @@
 import Container from '../ui/Container';
 import SectionHeading from '../ui/SectionHeading';
 import Button from '../ui/Button';
+import useReveal from '../../hooks/useReveal';
 import styles from './TeamPreview.module.css';
 
 const TeamPreview = () => (
-  <section className={styles.section}>
+  <section className={styles.section} ref={useReveal()}>
     <Container className={styles.inner}>
       <SectionHeading
         eyebrow="Who's behind it"

@@ -154,26 +154,60 @@ const QuantumField = () => {
       particles = makeParticles(width, height);
     };
 
+    // pause the loop while the hero is offscreen or the tab is hidden
+    let inView = true;
+    let running = false;
+
     const render = (now) => {
       const t = now / 1000;
       ctx.clearRect(0, 0, width, height);
       drawWaves(ctx, width, height, t);
       drawParticles(ctx, particles, height, t);
       drawBlochSphere(ctx, width, height, t);
-      if (!reducedMotion) rafId = window.requestAnimationFrame(render);
+      if (running) rafId = window.requestAnimationFrame(render);
     };
+
+    const start = () => {
+      if (running || reducedMotion) return;
+      running = true;
+      rafId = window.requestAnimationFrame(render);
+    };
+
+    const stop = () => {
+      running = false;
+      window.cancelAnimationFrame(rafId);
+    };
+
+    const syncRunning = () => {
+      if (inView && !document.hidden) start();
+      else stop();
+    };
+
+    const onVisibility = () => syncRunning();
+
+    const observer = 'IntersectionObserver' in window
+      ? new IntersectionObserver((entries) => {
+        inView = entries[0].isIntersecting;
+        syncRunning();
+      })
+      : null;
 
     resize();
     window.addEventListener('resize', resize);
+    document.addEventListener('visibilitychange', onVisibility);
+    if (observer) observer.observe(canvas);
+
     if (reducedMotion) {
       render(0);
     } else {
-      rafId = window.requestAnimationFrame(render);
+      start();
     }
 
     return () => {
-      window.cancelAnimationFrame(rafId);
+      stop();
       window.removeEventListener('resize', resize);
+      document.removeEventListener('visibilitychange', onVisibility);
+      if (observer) observer.disconnect();
     };
   }, []);
 

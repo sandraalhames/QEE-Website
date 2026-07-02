@@ -1,10 +1,11 @@
 import Container from '../ui/Container';
 import SectionHeading from '../ui/SectionHeading';
+import useReveal from '../../hooks/useReveal';
 import sponsors from '../../content/sponsors';
 import styles from './Sponsors.module.css';
 
 const Sponsors = () => (
-  <section className={styles.section}>
+  <section className={styles.section} ref={useReveal()}>
     <Container>
       <SectionHeading eyebrow="Sponsors" title="Backed by" align="center" />
       {sponsors.length === 0 ? (
