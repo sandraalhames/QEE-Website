@@ -1,10 +1,93 @@
 .section {
-  padding: var(--space-6) 0;
-  min-height: 40vh;
+  padding: var(--space-5) 0 var(--space-6);
 }
 
-.body {
-  max-width: 65ch;
+.circuit {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 72ch;
+  padding-left: 0.4rem;
+}
+
+/* the circuit wire */
+.circuit::before {
+  content: '';
+  position: absolute;
+  left: 3.1rem;
+  top: 1rem;
+  bottom: 1rem;
+  width: 2px;
+  background: linear-gradient(180deg, var(--color-sky-mid), var(--color-teal));
+  opacity: 0.45;
+}
+
+.step {
+  position: relative;
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+}
+
+.gate {
+  position: relative;
+  z-index: 1;
+  flex: none;
+  width: 5.6rem;
+  height: 5.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 2rem;
+  color: var(--color-sky-blue);
+  background: #fff;
+  border: 2px solid var(--color-sky-mid);
+  border-radius: 6px;
+}
+
+.gateConfirmed {
+  color: var(--color-void);
+  background: var(--color-teal);
+  border-color: var(--color-teal);
+  box-shadow: 0 0 20px var(--color-glow-teal);
+}
+
+.info {
+  padding-top: 0.2rem;
+}
+
+.date {
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  color: var(--color-teal-deep);
+  margin: 0 0 0.3rem;
+}
+
+.label {
+  font-size: 1.9rem;
+  margin-bottom: 0.4rem;
+}
+
+.detail {
   color: var(--color-ink-soft);
-  font-size: 1.7rem;
+  font-size: 1.5rem;
+  margin: 0;
+  max-width: 55ch;
+}
+
+.legend {
+  margin-top: var(--space-4);
+  font-size: 1.3rem;
+  color: var(--color-ink-soft);
+}
+
+.legendGate {
+  font-family: var(--font-mono);
+  color: var(--color-teal-deep);
+  border: 1px solid var(--color-teal);
+  border-radius: 3px;
+  padding: 0 0.5rem;
 }

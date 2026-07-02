@@ -1,0 +1,52 @@
+.card {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  text-align: center;
+}
+
+.photo {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.avatar {
+  width: 100%;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 30% 25%, rgba(94, 193, 229, 0.25), transparent 55%),
+    linear-gradient(160deg, var(--color-sky-pale) 0%, var(--color-sky-light) 100%);
+}
+
+.avatar span {
+  font-family: var(--font-mono);
+  font-size: 3.4rem;
+  font-weight: 500;
+  color: var(--color-sky-blue);
+  opacity: 0.75;
+}
+
+.details {
+  padding: var(--space-2) var(--space-2) var(--space-3);
+}
+
+.name {
+  font-size: 1.7rem;
+  margin-bottom: 0.3rem;
+}
+
+.role {
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  color: var(--color-teal-deep);
+  margin: 0 0 var(--space-1);
+}
+
+.social {
+  font-size: 1.3rem;
+}

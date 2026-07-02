@@ -1,10 +1,24 @@
-import ComingSoon from '../components/ui/ComingSoon';
+import Container from '../components/ui/Container';
+import SectionHeading from '../components/ui/SectionHeading';
+import FaqItem from '../components/faq/FaqItem';
+import faq from '../content/faq';
+import styles from './Faq.module.css';
 
 const Faq = () => (
-  <ComingSoon
-    title="FAQ"
-    blurb="Answers to eligibility, team size, prizes, and other common questions will go here."
-  />
+  <section className={styles.section}>
+    <Container>
+      <SectionHeading
+        eyebrow="faq"
+        title="Frequently asked questions"
+        subtitle="Can't find your answer? Email qee@usc.edu and we'll get back to you."
+      />
+      <div className={styles.list}>
+        {faq.map((entry) => (
+          <FaqItem key={entry.q} question={entry.q} answer={entry.a} />
+        ))}
+      </div>
+    </Container>
+  </section>
 );
 
 export default Faq;

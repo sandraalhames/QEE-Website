@@ -1,20 +1,38 @@
 import Container from '../components/ui/Container';
 import SectionHeading from '../components/ui/SectionHeading';
-import event from '../content/event';
+import schedule from '../content/schedule';
 import styles from './Schedule.module.css';
 
 const Schedule = () => (
   <section className={styles.section}>
     <Container>
-      <SectionHeading eyebrow="Coming soon" title="Schedule" />
-      <p className={styles.body}>
-        {event.format}
+      <SectionHeading
+        eyebrow="schedule"
+        title="How the event flows"
+        subtitle="Dates for the virtual phases are being finalized — the conference day is locked."
+      />
+      <div className={styles.circuit}>
+        {schedule.map((step) => (
+          <div key={step.label} className={styles.step}>
+            <div className={`${styles.gate} ${step.confirmed ? styles.gateConfirmed : ''}`.trim()}>
+              {step.gate}
+            </div>
+            <div className={styles.info}>
+              <p className={styles.date}>
+                {step.date || 'date tba'}
+              </p>
+              <h3 className={styles.label}>{step.label}</h3>
+              <p className={styles.detail}>{step.detail}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <p className={styles.legend}>
+        Gate letters borrowed from quantum circuits — the measurement gate
         {' '}
-        Full dates for the virtual challenge window and workshops will be
-        posted here once locked in. The final conference day is
+        <span className={styles.legendGate}>M</span>
         {' '}
-        <strong>{event.finalEventDateLabel}</strong>
-        .
+        is the one that&apos;s locked in.
       </p>
     </Container>
   </section>
