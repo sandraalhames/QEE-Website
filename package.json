@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "postbuild": "cp dist/index.html dist/404.html",
+    "postbuild": "cp dist/index.html dist/404.html && for r in schedule faq registration resources team; do mkdir -p dist/$r && cp dist/index.html dist/$r/index.html; done",
     "preview": "vite preview",
     "lint": "eslint src --ext .js,.jsx"
   },

@@ -1,12 +1,15 @@
 .wrap {
-  display: flex;
-  align-items: baseline;
-  gap: 1rem;
   font-family: var(--font-mono);
   color: var(--color-sky-light);
   font-size: 2.2rem;
   margin: 0 0 var(--space-3);
   font-variant-numeric: tabular-nums;
+}
+
+.visual {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
 }
 
 .tminus {
@@ -34,6 +37,9 @@
 @media (max-width: 640px) {
   .wrap {
     font-size: 1.8rem;
+  }
+
+  .visual {
     flex-wrap: wrap;
   }
 }

@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Outlet, useLocation } from 'react-router-dom';
+import { Outlet, useLocation, useNavigationType } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import styles from './Layout.module.css';
@@ -15,11 +15,17 @@ const TITLES = {
 
 const Layout = () => {
   const { pathname } = useLocation();
+  const navigationType = useNavigationType();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-    document.title = TITLES[pathname] || 'Not found · Qompute in LA';
-  }, [pathname]);
+    // scroll to top on link navigation only; browser back/forward (POP)
+    // keeps its own restored scroll position
+    if (navigationType !== 'POP') window.scrollTo(0, 0);
+    // normalize: react-router matches /Schedule and /schedule/ to the same
+    // route, so the title lookup has to as well
+    const normalized = pathname.toLowerCase().replace(/\/+$/, '') || '/';
+    document.title = TITLES[normalized] || 'Not found · Qompute in LA';
+  }, [pathname, navigationType]);
 
   return (
     <>

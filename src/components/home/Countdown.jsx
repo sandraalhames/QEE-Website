@@ -38,25 +38,30 @@ const Countdown = () => {
   }
 
   return (
-    <p className={styles.wrap} aria-label={`${parts.days} days until the conference day`}>
-      <span className={styles.tminus}>T−</span>
-      <span className={styles.unit}>
-        {parts.days}
-        <em>d</em>
+    <p className={styles.wrap}>
+      <span className="sr-only">
+        {`${parts.days} days, ${parts.hours} hours, and ${parts.minutes} minutes until the conference day.`}
       </span>
-      <span className={styles.unit}>
-        {pad(parts.hours)}
-        <em>h</em>
+      <span aria-hidden="true" className={styles.visual}>
+        <span className={styles.tminus}>T−</span>
+        <span className={styles.unit}>
+          {parts.days}
+          <em>d</em>
+        </span>
+        <span className={styles.unit}>
+          {pad(parts.hours)}
+          <em>h</em>
+        </span>
+        <span className={styles.unit}>
+          {pad(parts.minutes)}
+          <em>m</em>
+        </span>
+        <span className={styles.unit}>
+          {pad(parts.seconds)}
+          <em>s</em>
+        </span>
+        <span className={styles.label}>until conference day</span>
       </span>
-      <span className={styles.unit}>
-        {pad(parts.minutes)}
-        <em>m</em>
-      </span>
-      <span className={styles.unit}>
-        {pad(parts.seconds)}
-        <em>s</em>
-      </span>
-      <span className={styles.label}>until conference day</span>
     </p>
   );
 };

@@ -211,16 +211,6 @@ const QuantumField = () => {
     let width = 0;
     let height = 0;
 
-    const resize = () => {
-      const dpr = window.devicePixelRatio || 1;
-      width = canvas.clientWidth;
-      height = canvas.clientHeight;
-      canvas.width = width * dpr;
-      canvas.height = height * dpr;
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      particles = makeParticles(width, height);
-    };
-
     // pause the loop while the hero is offscreen or the tab is hidden
     let inView = true;
     let running = false;
@@ -239,6 +229,25 @@ const QuantumField = () => {
       drawParticles(ctx, particles, height, t);
       drawBlochSphere(ctx, width, height, t, qubit);
       if (running) rafId = window.requestAnimationFrame(render);
+    };
+
+    const resize = () => {
+      const dpr = window.devicePixelRatio || 1;
+      const prevWidth = width;
+      width = canvas.clientWidth;
+      height = canvas.clientHeight;
+      canvas.width = width * dpr;
+      canvas.height = height * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      // regenerate only on width changes; mobile browsers fire resize on
+      // scroll (URL bar collapse) with height-only changes, and regenerating
+      // there makes every particle visibly teleport
+      if (width !== prevWidth || particles.length === 0) {
+        particles = makeParticles(width, height);
+      }
+      // the width/height assignment wiped the bitmap; with the rAF loop off
+      // under reduced motion nothing would ever repaint it
+      if (reducedMotion) render(performance.now());
     };
 
     const overSphere = (event) => {
@@ -263,8 +272,12 @@ const QuantumField = () => {
       };
     };
 
+    // the hero's content container sits above the canvas and would swallow
+    // pointer events over the sphere, so listen on the shared parent section
+    const surface = canvas.parentElement;
+
     const onMove = (event) => {
-      canvas.style.cursor = (!reducedMotion && overSphere(event)) ? 'pointer' : 'default';
+      surface.style.cursor = (!reducedMotion && overSphere(event)) ? 'pointer' : '';
     };
 
     const start = () => {
@@ -295,8 +308,8 @@ const QuantumField = () => {
     resize();
     window.addEventListener('resize', resize);
     document.addEventListener('visibilitychange', onVisibility);
-    canvas.addEventListener('click', onClick);
-    canvas.addEventListener('mousemove', onMove);
+    surface.addEventListener('click', onClick);
+    surface.addEventListener('mousemove', onMove);
     if (observer) observer.observe(canvas);
 
     if (reducedMotion) {
@@ -309,8 +322,8 @@ const QuantumField = () => {
       stop();
       window.removeEventListener('resize', resize);
       document.removeEventListener('visibilitychange', onVisibility);
-      canvas.removeEventListener('click', onClick);
-      canvas.removeEventListener('mousemove', onMove);
+      surface.removeEventListener('click', onClick);
+      surface.removeEventListener('mousemove', onMove);
       if (observer) observer.disconnect();
     };
   }, []);

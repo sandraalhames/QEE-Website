@@ -17,8 +17,16 @@ const Button = ({
   }
 
   if (href) {
+    // only real web links open a new tab; mailto: in a new tab leaves the
+    // user stranded on a blank page in several browsers
+    const isWebLink = href.startsWith('http');
     return (
-      <a href={href} className={className} target="_blank" rel="noopener noreferrer">
+      <a
+        href={href}
+        className={className}
+        target={isWebLink ? '_blank' : undefined}
+        rel={isWebLink ? 'noopener noreferrer' : undefined}
+      >
         {children}
       </a>
     );
