@@ -7,6 +7,7 @@ import styles from './Layout.module.css';
 const TITLES = {
   '/': 'Qompute in LA · Quantum Engineering Ethics @ USC',
   '/schedule': 'Schedule · Qompute in LA',
+  '/speakers': 'Speakers · Qompute in LA',
   '/faq': 'FAQ · Qompute in LA',
   '/registration': 'Register · Qompute in LA',
   '/resources': 'Resources · Qompute in LA',

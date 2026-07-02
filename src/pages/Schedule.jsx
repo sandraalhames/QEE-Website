@@ -1,6 +1,7 @@
 import Container from '../components/ui/Container';
 import SectionHeading from '../components/ui/SectionHeading';
 import Button from '../components/ui/Button';
+import DayOfAgenda from '../components/schedule/DayOfAgenda';
 import schedule from '../content/schedule';
 import event from '../content/event';
 import styles from './Schedule.module.css';
@@ -44,6 +45,7 @@ const Schedule = () => (
         <span className={styles.legendGate}>M</span>
         . Measurement day is the one that&apos;s locked in.
       </p>
+      <DayOfAgenda />
       <div className={styles.calendar}>
         <Button href={event.gcalUrl} variant="secondary">
           Add Oct 4 to Google Calendar

@@ -6,6 +6,7 @@ import styles from './Navbar.module.css';
 const NAV_LINKS = [
   { to: '/', label: 'Home' },
   { to: '/schedule', label: 'Schedule' },
+  { to: '/speakers', label: 'Speakers' },
   { to: '/faq', label: 'FAQ' },
   { to: '/team', label: 'Team' },
   { to: '/resources', label: 'Resources' },
