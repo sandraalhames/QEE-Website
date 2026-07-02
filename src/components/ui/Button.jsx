@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import styles from './Button.module.css';
 
 const Button = ({
-  children, to, href, variant, type, onClick,
+  children, to = undefined, href = undefined, variant = 'primary',
+  type = 'button', onClick = undefined,
 }) => {
   const className = `${styles.button} ${styles[variant]}`;
 
@@ -38,14 +39,6 @@ Button.propTypes = {
   variant: PropTypes.oneOf(['primary', 'secondary', 'glow', 'ghost']),
   type: PropTypes.oneOf(['button', 'submit']),
   onClick: PropTypes.func,
-};
-
-Button.defaultProps = {
-  to: undefined,
-  href: undefined,
-  variant: 'primary',
-  type: 'button',
-  onClick: undefined,
 };
 
 export default Button;

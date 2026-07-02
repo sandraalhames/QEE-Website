@@ -1,6 +1,8 @@
 import Container from '../components/ui/Container';
 import SectionHeading from '../components/ui/SectionHeading';
+import Button from '../components/ui/Button';
 import schedule from '../content/schedule';
+import event from '../content/event';
 import styles from './Schedule.module.css';
 
 const Schedule = () => (
@@ -28,12 +30,26 @@ const Schedule = () => (
         ))}
       </div>
       <p className={styles.legend}>
-        Gate letters borrowed from quantum circuits — the measurement gate
+        The phases form a real quantum circuit: initialize
+        {' '}
+        <span className={styles.legendGate}>|0⟩</span>
+        , superpose
+        {' '}
+        <span className={styles.legendGate}>H</span>
+        , entangle
+        {' '}
+        <span className={styles.legendGate}>CX</span>
+        , measure
         {' '}
         <span className={styles.legendGate}>M</span>
         {' '}
-        is the one that&apos;s locked in.
+        — and measurement day is the one that&apos;s locked in.
       </p>
+      <div className={styles.calendar}>
+        <Button href={event.gcalUrl} variant="secondary">
+          Add Oct 4 to Google Calendar
+        </Button>
+      </div>
     </Container>
   </section>
 );

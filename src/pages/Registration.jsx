@@ -48,6 +48,7 @@ const Registration = () => (
             <Button href="mailto:qee@usc.edu?subject=Qompute%20in%20LA%20interest" variant="secondary">
               Email us your interest
             </Button>
+            <Button href={event.gcalUrl} variant="secondary">Add to Google Calendar</Button>
           </div>
         </div>
       )}

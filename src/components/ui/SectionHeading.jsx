@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import styles from './SectionHeading.module.css';
 
 const SectionHeading = ({
-  eyebrow, title, subtitle, align,
+  eyebrow = undefined, title, subtitle = undefined, align = 'left',
 }) => (
   <div className={`${styles.wrap} ${styles[align]}`}>
     {eyebrow && (
@@ -22,12 +22,6 @@ SectionHeading.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string,
   align: PropTypes.oneOf(['left', 'center']),
-};
-
-SectionHeading.defaultProps = {
-  eyebrow: undefined,
-  subtitle: undefined,
-  align: 'left',
 };
 
 export default SectionHeading;

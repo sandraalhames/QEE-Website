@@ -57,12 +57,18 @@ const drawParticles = (ctx, particles, h, t) => {
   });
 };
 
-const drawBlochSphere = (ctx, w, h, t) => {
-  if (w < 700) return;
+const sphereGeom = (w, h) => ({
+  cx: w * 0.76,
+  cy: h * 0.46,
+  r: Math.min(h * 0.30, 170),
+  visible: w >= 700,
+});
 
-  const cx = w * 0.76;
-  const cy = h * 0.46;
-  const r = Math.min(h * 0.30, 170);
+const drawBlochSphere = (ctx, w, h, t, qubit) => {
+  const {
+    cx, cy, r, visible,
+  } = sphereGeom(w, h);
+  if (!visible) return;
 
   ctx.strokeStyle = 'rgba(94, 193, 229, 0.35)';
   ctx.lineWidth = 1;
@@ -100,9 +106,8 @@ const drawBlochSphere = (ctx, w, h, t) => {
   ctx.strokeStyle = 'rgba(203, 222, 235, 0.25)';
   ctx.stroke();
 
-  // precessing state vector
-  const theta = 1.05;
-  const phi = t * 0.5;
+  // state vector (precessing, or mid-measurement)
+  const { theta, phi } = qubit;
   const vx = r * Math.sin(theta) * Math.cos(phi);
   const vy = (-r * Math.cos(theta)) + (r * Math.sin(theta) * Math.sin(phi) * 0.30);
   const tipX = cx + vx;
@@ -123,12 +128,74 @@ const drawBlochSphere = (ctx, w, h, t) => {
   ctx.fillStyle = glow;
   ctx.fill();
 
+  // measurement flash + readout
+  if (qubit.flash > 0) {
+    ctx.beginPath();
+    ctx.arc(tipX, tipY, 10 + ((1 - qubit.flash) * 30), 0, TAU);
+    ctx.strokeStyle = `rgba(80, 216, 175, ${0.7 * qubit.flash})`;
+    ctx.lineWidth = 2;
+    ctx.stroke();
+  }
+  if (qubit.readout) {
+    ctx.font = '500 15px "IBM Plex Mono", monospace';
+    ctx.fillStyle = 'rgba(80, 216, 175, 0.9)';
+    ctx.textAlign = 'center';
+    ctx.fillText(`measured ${qubit.readout}`, cx, cy + r + 48);
+  }
+
   // basis-state labels
   ctx.font = '500 13px "IBM Plex Mono", monospace';
   ctx.fillStyle = 'rgba(203, 222, 235, 0.6)';
   ctx.textAlign = 'center';
   ctx.fillText('|0⟩', cx, cy - (r * 1.12) - 10);
   ctx.fillText('|1⟩', cx, cy + (r * 1.12) + 20);
+};
+
+const BASE_THETA = 1.05;
+const MEASURE_ANIM = 0.3;
+const MEASURE_HOLD = 1.6;
+const MEASURE_RELEASE = 0.6;
+
+const lerp = (a, b, u) => a + ((b - a) * Math.min(1, Math.max(0, u)));
+
+// Resolve the vector's angles at time t given an in-flight measurement.
+// Collapse obeys the Born rule: for polar angle theta, P(|0>) = cos^2(theta/2).
+const qubitAt = (t, measurement) => {
+  if (!measurement) {
+    return {
+      theta: BASE_THETA, phi: t * 0.5, flash: 0, readout: null,
+    };
+  }
+
+  const dt = t - measurement.t0;
+  const target = measurement.pole === 0 ? 0.02 : Math.PI - 0.02;
+
+  if (dt < MEASURE_ANIM) {
+    return {
+      theta: lerp(BASE_THETA, target, dt / MEASURE_ANIM),
+      phi: measurement.phi0,
+      flash: 1 - (dt / MEASURE_ANIM),
+      readout: null,
+    };
+  }
+  if (dt < MEASURE_ANIM + MEASURE_HOLD) {
+    return {
+      theta: target,
+      phi: measurement.phi0,
+      flash: 0,
+      readout: measurement.pole === 0 ? '|0⟩' : '|1⟩',
+    };
+  }
+  if (dt < MEASURE_ANIM + MEASURE_HOLD + MEASURE_RELEASE) {
+    const u = (dt - MEASURE_ANIM - MEASURE_HOLD) / MEASURE_RELEASE;
+    return {
+      theta: lerp(target, BASE_THETA, u),
+      phi: lerp(measurement.phi0, t * 0.5, u),
+      flash: 0,
+      readout: null,
+    };
+  }
+  return null; // measurement finished — caller clears it
 };
 
 const QuantumField = () => {
@@ -158,13 +225,46 @@ const QuantumField = () => {
     let inView = true;
     let running = false;
 
+    let measurement = null;
+
     const render = (now) => {
       const t = now / 1000;
+      let qubit = qubitAt(t, measurement);
+      if (!qubit) {
+        measurement = null;
+        qubit = qubitAt(t, null);
+      }
       ctx.clearRect(0, 0, width, height);
       drawWaves(ctx, width, height, t);
       drawParticles(ctx, particles, height, t);
-      drawBlochSphere(ctx, width, height, t);
+      drawBlochSphere(ctx, width, height, t, qubit);
       if (running) rafId = window.requestAnimationFrame(render);
+    };
+
+    const overSphere = (event) => {
+      const rect = canvas.getBoundingClientRect();
+      const {
+        cx, cy, r, visible,
+      } = sphereGeom(width, height);
+      if (!visible) return false;
+      const dx = (event.clientX - rect.left) - cx;
+      const dy = (event.clientY - rect.top) - cy;
+      return ((dx * dx) + (dy * dy)) <= (r * r);
+    };
+
+    // click the sphere -> measure the qubit (Born rule: P(|0>) = cos^2(theta/2))
+    const onClick = (event) => {
+      if (reducedMotion || measurement || !overSphere(event)) return;
+      const p0 = Math.cos(BASE_THETA / 2) ** 2;
+      measurement = {
+        pole: Math.random() < p0 ? 0 : 1,
+        t0: performance.now() / 1000,
+        phi0: (performance.now() / 1000) * 0.5,
+      };
+    };
+
+    const onMove = (event) => {
+      canvas.style.cursor = (!reducedMotion && overSphere(event)) ? 'pointer' : 'default';
     };
 
     const start = () => {
@@ -195,6 +295,8 @@ const QuantumField = () => {
     resize();
     window.addEventListener('resize', resize);
     document.addEventListener('visibilitychange', onVisibility);
+    canvas.addEventListener('click', onClick);
+    canvas.addEventListener('mousemove', onMove);
     if (observer) observer.observe(canvas);
 
     if (reducedMotion) {
@@ -207,6 +309,8 @@ const QuantumField = () => {
       stop();
       window.removeEventListener('resize', resize);
       document.removeEventListener('visibilitychange', onVisibility);
+      canvas.removeEventListener('click', onClick);
+      canvas.removeEventListener('mousemove', onMove);
       if (observer) observer.disconnect();
     };
   }, []);

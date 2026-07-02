@@ -16,6 +16,7 @@ module.exports = {
     },
   },
   rules: {
+    'react/require-default-props': ['error', { functions: 'defaultArguments' }],
     'react/jsx-filename-extension': ['warn', { extensions: ['.jsx'] }],
     'react/react-in-jsx-scope': 'off',
     'import/prefer-default-export': 'off',

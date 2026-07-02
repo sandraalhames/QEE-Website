@@ -7,3 +7,12 @@
   color: var(--color-ink-soft);
   font-size: 1.8rem;
 }
+
+.credibility {
+  max-width: 68ch;
+  color: var(--color-ink-soft);
+  font-size: 1.45rem;
+  border-left: 3px solid var(--color-teal);
+  padding-left: var(--space-2);
+  margin: 0;
+}

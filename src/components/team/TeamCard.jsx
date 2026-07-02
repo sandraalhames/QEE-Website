@@ -9,7 +9,7 @@ const initialsOf = (name) => name
   .toUpperCase();
 
 const TeamCard = ({
-  name, role, photo, linkedin,
+  name = null, role, photo = null, linkedin = null,
 }) => (
   <div className={styles.card}>
     {photo ? (
@@ -36,12 +36,6 @@ TeamCard.propTypes = {
   role: PropTypes.string.isRequired,
   photo: PropTypes.string,
   linkedin: PropTypes.string,
-};
-
-TeamCard.defaultProps = {
-  name: null,
-  photo: null,
-  linkedin: null,
 };
 
 export default TeamCard;

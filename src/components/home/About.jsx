@@ -20,6 +20,12 @@ const About = () => (
         quantum computing while thinking critically about how it should be
         used.
       </p>
+      <p className={styles.credibility}>
+        Last year, QEE ran the USC side of Q³ — a coast-to-coast quantum
+        initiative with the Center for Quantum Networks and the UN
+        International Telecommunication Union — with support from IBM Quantum,
+        the Center for Quantum Networks, and USC Women in Engineering.
+      </p>
     </Container>
   </section>
 );
