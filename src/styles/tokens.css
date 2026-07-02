@@ -1,0 +1,56 @@
+:root {
+  /* ---- Brand ---- */
+  --color-navy: #0c2e8a;
+  --color-navy-deep: #081f5e;
+  --color-teal: #50d8af;
+  --color-teal-deep: #2fa98a;
+
+  /* ---- Sky accent set (from 2026 advertising palette) ---- */
+  --color-sky-light: #b8eff4;
+  --color-sky-blue: #2079af;
+  --color-sky-mid: #5ec1e5;
+  --color-sky-pale: #cbdeeb;
+
+  /* ---- Neutrals (implementation additions, not sourced from either doc) ---- */
+  --color-ink: #0f1a2e;
+  --color-ink-soft: #4a5670;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f3f9fb;
+  --color-border: #dbe6ee;
+
+  /* ---- Quantum void (dark hero/footer ground) ---- */
+  --color-void: #050e26;
+  --color-void-soft: #0a1f52;
+  --color-glow-teal: rgba(80, 216, 175, 0.45);
+
+  /* ---- Semantic ---- */
+  --color-link: var(--color-sky-blue);
+  --color-focus-ring: var(--color-sky-blue);
+
+  /* ---- Type families ---- */
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', monospace;
+
+  /* ---- Type scale ----
+     --fs-title and --fs-body are pinned by the 2026 design doc.
+     --fs-h2 / --fs-h3 / --fs-small are provisional implementation
+     values. TODO: finalize once the doc standardizes subheadings. */
+  --fs-title: 5.4rem;
+  --fs-h2: 2.6rem;
+  --fs-h3: 1.9rem;
+  --fs-body: 1.7rem;
+  --fs-small: 1.3rem;
+
+  /* ---- Spacing scale (implementation addition, 8px base) ---- */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+  --space-6: 6rem;
+
+  /* ---- Layout ---- */
+  --content-max-width: 1120px;
+  --radius: 8px;
+}

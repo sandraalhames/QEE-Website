@@ -1,0 +1,34 @@
+.wrap {
+  margin-bottom: var(--space-4);
+  max-width: 65ch;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+  color: var(--color-teal-deep);
+  margin: 0 0 var(--space-1);
+}
+
+.ket {
+  color: var(--color-sky-blue);
+  font-weight: 400;
+}
+
+.title {
+  margin-bottom: var(--space-1);
+}
+
+.subtitle {
+  color: var(--color-ink-soft);
+  margin: 0;
+}

@@ -147,6 +147,8 @@ h1, h2, h3, h4, h5, h6 {
 #header #logo img {
   padding: 0;
   margin: 0;
+  max-height: 44px;
+  width: auto;
 }
 
 @media (max-width: 768px) {
@@ -160,6 +162,21 @@ h1, h2, h3, h4, h5, h6 {
   #header #logo img {
     max-height: 40px;
   }
+}
+
+/*--------------------------------------------------------------
+# Logo Banner
+--------------------------------------------------------------*/
+#logo-banner {
+  width: 100%;
+  padding: 30px 0;
+  text-align: center;
+  background: #fff;
+}
+
+#logo-banner img {
+  max-height: 200px;
+  width: auto;
 }
 
 /*--------------------------------------------------------------

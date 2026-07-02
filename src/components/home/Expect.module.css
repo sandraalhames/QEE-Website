@@ -1,0 +1,39 @@
+.section {
+  padding: var(--space-5) 0;
+  background: var(--color-bg-alt);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-3);
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-3);
+}
+
+.ket {
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  color: var(--color-teal-deep);
+  margin: 0 0 var(--space-1);
+}
+
+.bracket {
+  color: var(--color-sky-blue);
+}
+
+.title {
+  font-size: 1.9rem;
+  margin-bottom: var(--space-1);
+}
+
+.body {
+  color: var(--color-ink-soft);
+  font-size: 1.5rem;
+  margin: 0;
+}

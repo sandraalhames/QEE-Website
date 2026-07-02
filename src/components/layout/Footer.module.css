@@ -1,0 +1,47 @@
+.footer {
+  background: linear-gradient(180deg, var(--color-navy-deep) 0%, var(--color-void) 100%);
+  color: #fff;
+  margin-top: var(--space-6);
+}
+
+.inner {
+  padding: var(--space-4) var(--space-3);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.org {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  margin: 0 0 0.3rem;
+}
+
+.email {
+  color: var(--color-sky-light);
+  font-size: 1.4rem;
+}
+
+.links {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.links a {
+  color: #fff;
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+
+.links a:hover {
+  color: var(--color-sky-light);
+}
+
+.copyright {
+  width: 100%;
+  font-size: 1.2rem;
+  color: var(--color-sky-light);
+  margin: var(--space-2) 0 0;
+}

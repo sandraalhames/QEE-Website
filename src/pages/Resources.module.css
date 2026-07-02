@@ -1,0 +1,58 @@
+.section {
+  padding: var(--space-5) 0 var(--space-6);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--space-3);
+}
+
+.card {
+  display: block;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-3);
+  text-decoration: none;
+  transition: border-color 0.2s ease, transform 0.15s ease;
+}
+
+.card:hover {
+  border-color: var(--color-teal);
+  transform: translateY(-2px);
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  color: var(--color-sky-blue);
+  text-transform: lowercase;
+}
+
+.tag::before {
+  content: '|';
+  color: var(--color-teal);
+}
+
+.tag::after {
+  content: '⟩';
+  color: var(--color-teal);
+}
+
+.title {
+  font-size: 1.7rem;
+  margin: var(--space-1) 0;
+}
+
+.blurb {
+  color: var(--color-ink-soft);
+  font-size: 1.45rem;
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+}

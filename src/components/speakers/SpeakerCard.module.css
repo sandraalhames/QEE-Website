@@ -1,0 +1,71 @@
+.card {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-3);
+}
+
+.top {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+  margin-bottom: var(--space-2);
+}
+
+.photo,
+.avatar {
+  width: 7.2rem;
+  height: 7.2rem;
+  border-radius: 50%;
+  flex: none;
+  object-fit: cover;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 30% 25%, rgba(94, 193, 229, 0.25), transparent 55%),
+    linear-gradient(160deg, var(--color-sky-pale) 0%, var(--color-sky-light) 100%);
+}
+
+.avatar span {
+  font-family: var(--font-mono);
+  font-size: 1.9rem;
+  color: var(--color-sky-blue);
+  opacity: 0.75;
+}
+
+.kind {
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  color: var(--color-teal-deep);
+  margin: 0 0 0.2rem;
+}
+
+.bracket {
+  color: var(--color-sky-blue);
+}
+
+.name {
+  font-size: 1.8rem;
+  margin-bottom: 0.2rem;
+}
+
+.credential {
+  font-weight: 400;
+  color: var(--color-ink-soft);
+}
+
+.title {
+  font-size: 1.35rem;
+  color: var(--color-ink-soft);
+  margin: 0;
+}
+
+.bio {
+  color: var(--color-ink-soft);
+  font-size: 1.45rem;
+  margin: 0;
+}

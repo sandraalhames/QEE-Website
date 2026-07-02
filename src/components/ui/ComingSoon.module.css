@@ -1,0 +1,4 @@
+.section {
+  padding: var(--space-6) 0;
+  min-height: 40vh;
+}

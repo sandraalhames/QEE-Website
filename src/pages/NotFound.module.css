@@ -1,0 +1,27 @@
+.section {
+  padding: var(--space-6) 0;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+}
+
+.inner {
+  text-align: center;
+}
+
+.code {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 6.4rem;
+  color: var(--color-navy);
+}
+
+.ket {
+  color: var(--color-sky-blue);
+  font-weight: 400;
+}
+
+.blurb {
+  color: var(--color-ink-soft);
+  margin-bottom: var(--space-3);
+}

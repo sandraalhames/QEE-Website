@@ -1,0 +1,45 @@
+.wrap {
+  font-family: var(--font-mono);
+  color: var(--color-sky-light);
+  font-size: 2.2rem;
+  margin: 0 0 var(--space-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.visual {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.tminus {
+  color: var(--color-teal);
+  font-weight: 500;
+}
+
+.unit {
+  font-weight: 500;
+}
+
+.unit em {
+  font-style: normal;
+  font-size: 1.3rem;
+  color: var(--color-sky-mid);
+  margin-left: 0.15rem;
+}
+
+.label {
+  font-size: 1.25rem;
+  color: var(--color-sky-mid);
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .wrap {
+    font-size: 1.8rem;
+  }
+
+  .visual {
+    flex-wrap: wrap;
+  }
+}
