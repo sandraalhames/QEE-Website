@@ -1,5 +1,6 @@
 import Container from '../ui/Container';
 import Button from '../ui/Button';
+import event from '../../content/event';
 import styles from './Hero.module.css';
 
 const Hero = () => (
@@ -12,8 +13,11 @@ const Hero = () => (
         <span className={styles.accent}>LA</span>
       </h1>
       <p className={styles.subtitle}>
-        A quantum computing &amp; ethics hackathon for USC students —
-        date and location TBA.
+        A quantum computing &amp; ethics hackathon for USC students.
+        Virtual challenges lead up to an in-person conference day on
+        {' '}
+        {event.finalEventDateLabel}
+        .
       </p>
       <div className={styles.actions}>
         <Button to="/registration" variant="primary">Register interest</Button>

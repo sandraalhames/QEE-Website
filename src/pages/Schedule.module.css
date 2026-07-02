@@ -1,0 +1,10 @@
+.section {
+  padding: var(--space-6) 0;
+  min-height: 40vh;
+}
+
+.body {
+  max-width: 65ch;
+  color: var(--color-ink-soft);
+  font-size: 1.7rem;
+}
