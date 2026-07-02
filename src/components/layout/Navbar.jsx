@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import qeeLogo from '../../assets/qee-logo.png';
+import qeeMark from '../../assets/qee-mark.png';
 import styles from './Navbar.module.css';
 
 const NAV_LINKS = [
@@ -20,7 +20,7 @@ const Navbar = () => {
     <header className={styles.header}>
       <div className={styles.inner}>
         <NavLink to="/" className={styles.brand} onClick={() => setIsOpen(false)}>
-          <img src={qeeLogo} alt="QEE logo" className={styles.logo} />
+          <img src={qeeMark} alt="QEE logo" className={styles.logo} />
           <span>Qompute in LA</span>
         </NavLink>
 
