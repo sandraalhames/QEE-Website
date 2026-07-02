@@ -10,7 +10,7 @@ const Sponsors = () => (
       <SectionHeading eyebrow="Sponsors" title="Backed by" align="center" />
       {sponsors.length === 0 ? (
         <p className={styles.tba}>
-          This year&apos;s sponsor lineup is being finalized — check back soon.
+          This year&apos;s sponsor lineup is being finalized. Check back soon.
           {' '}
           <a href="mailto:qee@usc.edu">Interested in sponsoring?</a>
         </p>

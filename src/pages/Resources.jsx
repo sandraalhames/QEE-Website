@@ -9,7 +9,7 @@ const Resources = () => (
       <SectionHeading
         eyebrow="resources"
         title="Learn quantum before you compete"
-        subtitle="No prior experience needed for Qompute — these will take you from zero to writing circuits."
+        subtitle="No prior experience needed for Qompute. These will take you from zero to writing circuits."
       />
       <div className={styles.grid}>
         {resources.map((resource) => (

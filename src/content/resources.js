@@ -4,7 +4,7 @@ const resources = [
   {
     title: 'IBM Quantum Learning',
     url: 'https://learning.quantum.ibm.com/',
-    blurb: 'Free structured courses from IBM — start with "Basics of quantum information" if you\'re brand new.',
+    blurb: 'Free structured courses from IBM. Start with "Basics of quantum information" if you\'re brand new.',
     tag: 'course',
   },
   {
@@ -22,7 +22,7 @@ const resources = [
   {
     title: 'Quantum Country',
     url: 'https://quantum.country/',
-    blurb: 'A mnemonic-based intro essay series by Andy Matuschak & Michael Nielsen — the gentlest serious on-ramp to qubits.',
+    blurb: 'A mnemonic-based intro essay series by Andy Matuschak & Michael Nielsen. The gentlest serious on-ramp to qubits.',
     tag: 'reading',
   },
 ];

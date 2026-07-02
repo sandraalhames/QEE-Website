@@ -11,7 +11,7 @@ const Schedule = () => (
       <SectionHeading
         eyebrow="schedule"
         title="How the event flows"
-        subtitle="Dates for the virtual phases are being finalized — the conference day is locked."
+        subtitle="Dates for the virtual phases are being finalized. The conference day is locked."
       />
       <div className={styles.circuit}>
         {schedule.map((step) => (
@@ -42,8 +42,7 @@ const Schedule = () => (
         , measure
         {' '}
         <span className={styles.legendGate}>M</span>
-        {' '}
-        — and measurement day is the one that&apos;s locked in.
+        . Measurement day is the one that&apos;s locked in.
       </p>
       <div className={styles.calendar}>
         <Button href={event.gcalUrl} variant="secondary">

@@ -1,9 +1,9 @@
 // TODO: fill in the real e-board roster. For each member:
-//   name     — full name
-//   role     — e.g. 'President', 'VP of Events'
-//   photo    — import a 400x400+ square headshot into src/assets/team/ and
+//   name     : full name
+//   role     : e.g. 'President', 'VP of Events'
+//   photo    : import a 400x400+ square headshot into src/assets/team/ and
 //              reference it here; leave null for the placeholder avatar
-//   linkedin — profile URL, or null to hide the link
+//   linkedin : profile URL, or null to hide the link
 // Add or remove entries to match the real headcount.
 const team = [
   {

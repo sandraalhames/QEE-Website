@@ -8,7 +8,7 @@ import styles from './Registration.module.css';
 const REGISTRATION_FORM_URL = null;
 
 const DETAILS = [
-  { k: 'when', v: `${event.finalEventDateLabel} — conference day; virtual challenges run in the weeks prior` },
+  { k: 'when', v: `${event.finalEventDateLabel} is conference day; virtual challenges run in the weeks prior` },
   { k: 'where', v: 'USC campus, Los Angeles (venue announced with the schedule)' },
   { k: 'format', v: 'Keynote talks, hands-on workshops, panels, and merch' },
 ];
@@ -41,7 +41,7 @@ const Registration = () => (
       ) : (
         <div className={styles.notify}>
           <p className={styles.tba}>
-            The form isn&apos;t live yet — get notified the moment it is:
+            The form isn&apos;t live yet. Get notified the moment it is:
           </p>
           <div className={styles.notifyActions}>
             <Button href="https://www.instagram.com/qee_usc/" variant="primary">Follow @qee_usc</Button>

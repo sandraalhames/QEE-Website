@@ -5,7 +5,7 @@
 }
 
 html {
-  /* 62.5% base so 1rem = 10px — makes the doc's rem values
+  /* 62.5% base so 1rem = 10px, which makes the doc's rem values
      (5.4rem title, 1.7rem body) resolve to sane 54px / 17px sizes. */
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -85,7 +85,7 @@ button {
 
 @media (max-width: 640px) {
   :root {
-    /* still 1rem = 10px here (inherited from html) — these resolve to
+    /* still 1rem = 10px here (inherited from html); these resolve to
        ~34px / 24px / 20px / 16px */
     --fs-title: 3.4rem;
     --fs-h2: 2.4rem;

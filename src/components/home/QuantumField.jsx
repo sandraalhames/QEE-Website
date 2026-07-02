@@ -29,7 +29,7 @@ const drawWaves = (ctx, w, h, t) => {
   bands.forEach((band) => {
     ctx.beginPath();
     for (let x = 0; x <= w; x += 4) {
-      // two superposed sines with a slow beat envelope — interference feel
+      // two superposed sines with a slow beat envelope for an interference feel
       const envelope = Math.sin((x * 0.002) + (t * 0.2));
       const y = (band.base * h)
         + (band.amp * envelope * Math.sin((x * band.k) + (t * band.speed)))
@@ -195,7 +195,7 @@ const qubitAt = (t, measurement) => {
       readout: null,
     };
   }
-  return null; // measurement finished — caller clears it
+  return null; // measurement finished; caller clears it
 };
 
 const QuantumField = () => {

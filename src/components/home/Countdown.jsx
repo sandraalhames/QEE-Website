@@ -32,7 +32,7 @@ const Countdown = () => {
   if (!parts) {
     return (
       <p className={styles.wrap}>
-        {isEventDay ? 'Happening today at USC.' : 'That’s a wrap — see you next year.'}
+        {isEventDay ? 'Happening today at USC.' : 'That’s a wrap. See you next year.'}
       </p>
     );
   }

@@ -5,12 +5,12 @@ import Footer from './Footer';
 import styles from './Layout.module.css';
 
 const TITLES = {
-  '/': 'Qompute in LA — Quantum Engineering Ethics @ USC',
-  '/schedule': 'Schedule — Qompute in LA',
-  '/faq': 'FAQ — Qompute in LA',
-  '/registration': 'Register — Qompute in LA',
-  '/resources': 'Resources — Qompute in LA',
-  '/team': 'Team — Qompute in LA',
+  '/': 'Qompute in LA · Quantum Engineering Ethics @ USC',
+  '/schedule': 'Schedule · Qompute in LA',
+  '/faq': 'FAQ · Qompute in LA',
+  '/registration': 'Register · Qompute in LA',
+  '/resources': 'Resources · Qompute in LA',
+  '/team': 'Team · Qompute in LA',
 };
 
 const Layout = () => {
@@ -18,7 +18,7 @@ const Layout = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = TITLES[pathname] || 'Not found — Qompute in LA';
+    document.title = TITLES[pathname] || 'Not found · Qompute in LA';
   }, [pathname]);
 
   return (

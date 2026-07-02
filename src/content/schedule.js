@@ -12,7 +12,7 @@ const schedule = [
     gate: 'H',
     label: 'Challenges released',
     date: null,
-    detail: 'Superpose: virtual quantum challenges open — explore them anywhere, on your own schedule.',
+    detail: 'Superpose: virtual quantum challenges open. Explore them anywhere, on your own schedule.',
   },
   {
     gate: 'CX',
@@ -25,7 +25,7 @@ const schedule = [
     label: 'Conference day @ USC',
     date: 'October 4, 2026',
     confirmed: true,
-    detail: 'Measure: the in-person finale — keynote talks, hands-on workshops, panels, and merch.',
+    detail: 'Measure: the in-person finale, with keynote talks, hands-on workshops, panels, and merch.',
   },
 ];
 

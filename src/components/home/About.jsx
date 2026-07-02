@@ -14,17 +14,17 @@ const About = () => (
       <p className={styles.body}>
         Through lectures, panels, keynote speakers, and hands-on activities,
         QEE challenges current and future engineers to explore the ethical
-        implications of their work — building toward a quantum future that
+        implications of their work, building toward a quantum future that
         benefits everyone, not just the people building it. Qompute in LA is
         our annual hackathon: a chance for USC students to work hands-on with
         quantum computing while thinking critically about how it should be
         used.
       </p>
       <p className={styles.credibility}>
-        Last year, QEE ran the USC side of Q³ — a coast-to-coast quantum
+        Last year, QEE ran the USC side of Q³, a coast-to-coast quantum
         initiative with the Center for Quantum Networks and the UN
-        International Telecommunication Union — with support from IBM Quantum,
-        the Center for Quantum Networks, and USC Women in Engineering.
+        International Telecommunication Union, with support from IBM Quantum
+        and USC Women in Engineering.
       </p>
     </Container>
   </section>

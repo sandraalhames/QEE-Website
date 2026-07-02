@@ -7,7 +7,7 @@ const TRACKS = [
   {
     ket: 'learn',
     title: 'Workshops',
-    body: 'Intro sessions that take you from zero quantum background to writing your first circuits — no prerequisites.',
+    body: 'Intro sessions that take you from zero quantum background to writing your first circuits. No prerequisites.',
   },
   {
     ket: 'build',
@@ -17,7 +17,7 @@ const TRACKS = [
   {
     ket: 'connect',
     title: 'Conference day',
-    body: 'October 4 at USC — keynote talks, panels on quantum ethics, hands-on workshops, merch, and the people building the field.',
+    body: 'October 4 at USC: keynote talks, panels on quantum ethics, hands-on workshops, merch, and the people building the field.',
   },
 ];
 
@@ -27,7 +27,7 @@ const Expect = () => (
       <SectionHeading
         eyebrow="what to expect"
         title="Three ways in"
-        subtitle="Come for the talks, the challenges, or the community — most people leave with all three."
+        subtitle="Come for the talks, the challenges, or the community. Most people leave with all three."
       />
       <div className={styles.grid}>
         {TRACKS.map((track) => (

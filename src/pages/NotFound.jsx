@@ -11,7 +11,7 @@ const NotFound = () => (
         <span className={styles.ket}>⟩</span>
       </h1>
       <p className={styles.blurb}>
-        This state doesn&apos;t exist — the wavefunction collapsed to nothing.
+        This state doesn&apos;t exist. The wavefunction collapsed to nothing.
       </p>
       <Button to="/" variant="primary">Return to |home⟩</Button>
     </Container>

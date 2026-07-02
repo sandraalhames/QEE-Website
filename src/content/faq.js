@@ -2,7 +2,7 @@
 const faq = [
   {
     q: 'What is Qompute in LA?',
-    a: 'A quantum computing & ethics hackathon run by Quantum Engineering Ethics (QEE) at USC. Virtual challenges run in the weeks leading up to an in-person conference day — talks, workshops, panels, and merch — at USC on October 4, 2026.',
+    a: 'A quantum computing & ethics hackathon run by Quantum Engineering Ethics (QEE) at USC. Virtual challenges run in the weeks leading up to an in-person conference day of talks, workshops, panels, and merch at USC on October 4, 2026.',
   },
   {
     q: 'Who can attend?',
@@ -10,7 +10,7 @@ const faq = [
   },
   {
     q: 'Do I need quantum computing experience?',
-    a: 'No — the event is built to be approachable. Workshops and our resources page will get you from zero to writing your first quantum circuits, and the challenges are designed with multiple entry points.',
+    a: 'No. The event is built to be approachable. Workshops and our resources page will get you from zero to writing your first quantum circuits, and the challenges are designed with multiple entry points.',
   },
   {
     q: 'How do teams work?',
@@ -22,7 +22,7 @@ const faq = [
   },
   {
     q: 'How do I sign up?',
-    a: 'Registration opens soon via Google Form — the Register page will have the link, and we\'ll announce it on Instagram (@qee_usc).',
+    a: 'Registration opens soon via Google Form. The Register page will have the link, and we\'ll announce it on Instagram (@qee_usc).',
   },
 ];
 
