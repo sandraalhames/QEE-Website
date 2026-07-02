@@ -1,0 +1,79 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* 62.5% base so 1rem = 10px — makes the doc's rem values
+     (5.4rem title, 1.7rem body) resolve to sane 54px / 17px sizes. */
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--color-navy);
+  line-height: 1.15;
+  margin: 0 0 var(--space-2);
+  text-wrap: balance;
+}
+
+h1 { font-size: var(--fs-title); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
+
+p {
+  margin: 0 0 var(--space-2);
+}
+
+a {
+  color: var(--color-link);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    /* still 1rem = 10px here (inherited from html) — these resolve to
+       ~34px / 24px / 20px / 16px */
+    --fs-title: 3.4rem;
+    --fs-h2: 2.4rem;
+    --fs-h3: 2rem;
+    --fs-body: 1.6rem;
+  }
+}

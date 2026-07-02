@@ -1,0 +1,29 @@
+.wrap {
+  margin-bottom: var(--space-4);
+  max-width: 65ch;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.eyebrow {
+  font-family: var(--font-heading);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-teal-deep);
+  margin: 0 0 var(--space-1);
+}
+
+.title {
+  margin-bottom: var(--space-1);
+}
+
+.subtitle {
+  color: var(--color-ink-soft);
+  margin: 0;
+}

@@ -1,0 +1,9 @@
+.section {
+  padding: var(--space-5) 0;
+}
+
+.body {
+  max-width: 68ch;
+  color: var(--color-ink-soft);
+  font-size: 1.8rem;
+}
