@@ -36,3 +36,26 @@
   background: var(--color-navy);
   color: #fff;
 }
+
+/* dark-ground variants (quantum hero / footer) */
+.glow {
+  background: var(--color-teal);
+  color: var(--color-void);
+  box-shadow: 0 0 28px var(--color-glow-teal);
+}
+
+.glow:hover {
+  background: #6ee6c2;
+  color: var(--color-void);
+}
+
+.ghost {
+  background: transparent;
+  border-color: var(--color-sky-pale);
+  color: var(--color-sky-pale);
+}
+
+.ghost:hover {
+  background: rgba(203, 222, 235, 0.12);
+  color: #fff;
+}

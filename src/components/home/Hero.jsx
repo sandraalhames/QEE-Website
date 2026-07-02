@@ -1,12 +1,18 @@
 import Container from '../ui/Container';
 import Button from '../ui/Button';
+import QuantumField from './QuantumField';
 import event from '../../content/event';
 import styles from './Hero.module.css';
 
 const Hero = () => (
   <section className={styles.hero}>
+    <QuantumField />
     <Container className={styles.inner}>
-      <p className={styles.eyebrow}>USC Quantum Engineering Ethics</p>
+      <p className={styles.eyebrow}>
+        <span className={styles.ket}>|</span>
+        usc quantum engineering ethics
+        <span className={styles.ket}>⟩</span>
+      </p>
       <h1 className={styles.title}>
         Qompute in
         {' '}
@@ -20,8 +26,8 @@ const Hero = () => (
         .
       </p>
       <div className={styles.actions}>
-        <Button to="/registration" variant="primary">Register interest</Button>
-        <Button to="/schedule" variant="secondary">View schedule</Button>
+        <Button to="/registration" variant="glow">Register interest</Button>
+        <Button to="/schedule" variant="ghost">View schedule</Button>
       </div>
     </Container>
   </section>

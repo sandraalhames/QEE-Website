@@ -35,7 +35,7 @@ Button.propTypes = {
   children: PropTypes.node.isRequired,
   to: PropTypes.string,
   href: PropTypes.string,
-  variant: PropTypes.oneOf(['primary', 'secondary']),
+  variant: PropTypes.oneOf(['primary', 'secondary', 'glow', 'ghost']),
   type: PropTypes.oneOf(['button', 'submit']),
   onClick: PropTypes.func,
 };

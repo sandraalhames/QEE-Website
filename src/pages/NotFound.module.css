@@ -10,6 +10,18 @@
 }
 
 .code {
-  font-size: 6rem;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 6.4rem;
+  color: var(--color-navy);
+}
+
+.ket {
   color: var(--color-sky-blue);
+  font-weight: 400;
+}
+
+.blurb {
+  color: var(--color-ink-soft);
+  margin-bottom: var(--space-3);
 }

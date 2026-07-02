@@ -18,6 +18,11 @@
   --color-bg-alt: #f3f9fb;
   --color-border: #dbe6ee;
 
+  /* ---- Quantum void (dark hero/footer ground) ---- */
+  --color-void: #050e26;
+  --color-void-soft: #0a1f52;
+  --color-glow-teal: rgba(80, 216, 175, 0.45);
+
   /* ---- Semantic ---- */
   --color-link: var(--color-sky-blue);
   --color-focus-ring: var(--color-sky-blue);
@@ -25,6 +30,7 @@
   /* ---- Type families ---- */
   --font-heading: 'Poppins', sans-serif;
   --font-body: 'Inter', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', monospace;
 
   /* ---- Type scale ----
      --fs-title and --fs-body are pinned by the 2026 design doc.

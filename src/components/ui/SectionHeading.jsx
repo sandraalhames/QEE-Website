@@ -5,7 +5,13 @@ const SectionHeading = ({
   eyebrow, title, subtitle, align,
 }) => (
   <div className={`${styles.wrap} ${styles[align]}`}>
-    {eyebrow && <p className={styles.eyebrow}>{eyebrow}</p>}
+    {eyebrow && (
+      <p className={styles.eyebrow}>
+        <span className={styles.ket}>|</span>
+        {eyebrow}
+        <span className={styles.ket}>⟩</span>
+      </p>
+    )}
     <h2 className={styles.title}>{title}</h2>
     {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
   </div>
