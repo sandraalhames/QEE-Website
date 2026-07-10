@@ -8,6 +8,7 @@ const Team = () => (
   <section className={styles.section}>
     <Container>
       <SectionHeading
+        as="h1"
         eyebrow="team"
         title="Meet the e-board"
         subtitle="The USC students behind QEE and Qompute in LA. Names and photos landing soon."

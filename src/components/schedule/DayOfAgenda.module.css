@@ -14,7 +14,7 @@
   font-family: var(--font-mono);
   font-size: 1.3rem;
   font-weight: 400;
-  color: var(--color-teal-deep);
+  color: var(--color-teal-text);
 }
 
 .note {
@@ -90,7 +90,7 @@
 .kind {
   font-family: var(--font-mono);
   font-size: 1.2rem;
-  color: var(--color-teal-deep);
+  color: var(--color-teal-text);
 }
 
 .bracket {

@@ -9,6 +9,7 @@ const Speakers = () => (
   <section className={styles.section}>
     <Container>
       <SectionHeading
+        as="h1"
         eyebrow="speakers"
         title="Talks and panels"
         subtitle="The people bringing quantum computing and its ethics questions to the conference day."

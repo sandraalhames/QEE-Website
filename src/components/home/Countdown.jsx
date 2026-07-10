@@ -22,8 +22,39 @@ const Countdown = () => {
   const [now, setNow] = useState(() => Date.now());
 
   useEffect(() => {
-    const id = window.setInterval(() => setNow(Date.now()), 1000);
-    return () => window.clearInterval(id);
+    let id = null;
+
+    const tick = () => setNow(Date.now());
+
+    const start = () => {
+      if (id !== null) return;
+      id = window.setInterval(tick, 1000);
+    };
+
+    const stop = () => {
+      if (id === null) return;
+      window.clearInterval(id);
+      id = null;
+    };
+
+    // pause the tick while the tab is hidden; resync immediately from
+    // Date.now() on resume so the displayed countdown isn't stale
+    const syncRunning = () => {
+      if (document.hidden) {
+        stop();
+      } else {
+        tick();
+        start();
+      }
+    };
+
+    document.addEventListener('visibilitychange', syncRunning);
+    start();
+
+    return () => {
+      stop();
+      document.removeEventListener('visibilitychange', syncRunning);
+    };
   }, []);
 
   const parts = partsUntil(now);

@@ -7,6 +7,7 @@ const Resources = () => (
   <section className={styles.section}>
     <Container>
       <SectionHeading
+        as="h1"
         eyebrow="resources"
         title="Learn quantum before you compete"
         subtitle="No prior experience needed for Qompute. These will take you from zero to writing circuits."

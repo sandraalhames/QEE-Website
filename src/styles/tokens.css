@@ -4,6 +4,10 @@
   --color-navy-deep: #081f5e;
   --color-teal: #50d8af;
   --color-teal-deep: #2fa98a;
+  /* AA-safe text variant of teal-deep (2.93:1 on white, fails AA for small
+     text); #1f7a63 measures ~5.22:1 on white. Use for small teal label/eyebrow
+     text; keep teal-deep for borders/backgrounds/decorative uses. */
+  --color-teal-text: #1f7a63;
 
   /* ---- Sky accent set (from 2026 advertising palette) ---- */
   --color-sky-light: #b8eff4;

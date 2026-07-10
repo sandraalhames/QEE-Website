@@ -15,3 +15,23 @@
 .skipLink:focus {
   left: 0;
 }
+
+/* #main is a programmatic focus target on route change, not something a
+   user tabs to, so it shouldn't show a focus ring */
+#main:focus {
+  outline: none;
+}
+
+.errorSection {
+  padding: var(--space-6) 0;
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.errorBlurb {
+  color: var(--color-ink-soft);
+  margin-bottom: var(--space-3);
+}

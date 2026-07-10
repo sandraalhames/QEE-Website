@@ -40,7 +40,7 @@
 .kind {
   font-family: var(--font-mono);
   font-size: 1.15rem;
-  color: var(--color-teal-deep);
+  color: var(--color-teal-text);
   margin: 0 0 0.2rem;
 }
 
