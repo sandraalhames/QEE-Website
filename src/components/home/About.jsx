@@ -4,7 +4,7 @@ import useReveal from '../../hooks/useReveal';
 import styles from './About.module.css';
 
 const About = () => (
-  <section className={styles.section} ref={useReveal()}>
+  <section id="about" className={styles.section} ref={useReveal()}>
     <Container>
       <SectionHeading
         eyebrow="About"

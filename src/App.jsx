@@ -1,14 +1,18 @@
 import { lazy, Suspense } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import {
+  BrowserRouter, Routes, Route, Navigate,
+} from 'react-router-dom';
 import Layout from './components/layout/Layout';
 
 const Home = lazy(() => import('./pages/Home'));
+const Team = lazy(() => import('./pages/Team'));
+const QomputeLayout = lazy(() => import('./pages/events/QomputeLayout'));
+const QomputeLanding = lazy(() => import('./pages/events/QomputeLanding'));
 const Schedule = lazy(() => import('./pages/Schedule'));
 const Speakers = lazy(() => import('./pages/Speakers'));
 const Faq = lazy(() => import('./pages/Faq'));
 const Registration = lazy(() => import('./pages/Registration'));
 const Resources = lazy(() => import('./pages/Resources'));
-const Team = lazy(() => import('./pages/Team'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 // wraps just the routed page, not Layout, so Navbar/Footer never
@@ -26,12 +30,27 @@ const App = () => (
     <Routes>
       <Route element={<Layout />}>
         <Route index element={withSuspense(<Home />)} />
-        <Route path="schedule" element={withSuspense(<Schedule />)} />
-        <Route path="speakers" element={withSuspense(<Speakers />)} />
-        <Route path="faq" element={withSuspense(<Faq />)} />
-        <Route path="registration" element={withSuspense(<Registration />)} />
-        <Route path="resources" element={withSuspense(<Resources />)} />
         <Route path="team" element={withSuspense(<Team />)} />
+
+        <Route path="events">
+          <Route index element={<Navigate to="/events/qompute" replace />} />
+          <Route path="qompute" element={withSuspense(<QomputeLayout />)}>
+            <Route index element={withSuspense(<QomputeLanding />)} />
+            <Route path="schedule" element={withSuspense(<Schedule />)} />
+            <Route path="speakers" element={withSuspense(<Speakers />)} />
+            <Route path="faq" element={withSuspense(<Faq />)} />
+            <Route path="resources" element={withSuspense(<Resources />)} />
+            <Route path="register" element={withSuspense(<Registration />)} />
+          </Route>
+        </Route>
+
+        {/* legacy flat URLs -> nested paths (preserve old links/QR/SEO) */}
+        <Route path="schedule" element={<Navigate to="/events/qompute/schedule" replace />} />
+        <Route path="speakers" element={<Navigate to="/events/qompute/speakers" replace />} />
+        <Route path="faq" element={<Navigate to="/events/qompute/faq" replace />} />
+        <Route path="registration" element={<Navigate to="/events/qompute/register" replace />} />
+        <Route path="resources" element={<Navigate to="/events/qompute/resources" replace />} />
+
         <Route path="*" element={withSuspense(<NotFound />)} />
       </Route>
     </Routes>

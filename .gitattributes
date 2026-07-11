@@ -1,2 +1,9 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Force LF line endings on checkout for ALL platforms. Without eol=lf,
+# Windows git checks text files out as CRLF, and airbnb ESLint's
+# linebreak-style rule then fails every line. Repo blobs stay LF.
+* text=auto eol=lf
+
+# Binary assets: never touch line endings
+*.png binary
+*.jpg binary
+*.ico binary

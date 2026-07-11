@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "postbuild": "cp dist/index.html dist/404.html && for r in schedule speakers faq registration resources team; do mkdir -p dist/$r && cp dist/index.html dist/$r/index.html; done && node scripts/inject-meta.mjs",
+    "postbuild": "cp dist/index.html dist/404.html && for r in team events events/qompute events/qompute/schedule events/qompute/speakers events/qompute/faq events/qompute/resources events/qompute/register schedule speakers faq registration resources; do mkdir -p dist/$r && cp dist/index.html dist/$r/index.html; done && node scripts/inject-meta.mjs",
     "preview": "vite preview",
     "lint": "eslint src --ext .js,.jsx"
   },
