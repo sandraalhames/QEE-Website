@@ -1,8 +1,10 @@
-import { Link } from 'react-router-dom';
 import Container from '../ui/Container';
+import event from '../../content/event';
 import styles from './Footer.module.css';
 
 const CURRENT_YEAR = new Date().getFullYear();
+const memberHref = event.joinFormUrl
+  || 'mailto:qee@usc.edu?subject=Joining%20QEE';
 
 const Footer = () => (
   <footer className={styles.footer}>
@@ -19,7 +21,13 @@ const Footer = () => (
         <a href="https://www.instagram.com/qee_usc/" target="_blank" rel="noopener noreferrer">
           Instagram
         </a>
-        <Link to="/registration">Register</Link>
+        <a
+          href={memberHref}
+          target={memberHref.startsWith('http') ? '_blank' : undefined}
+          rel={memberHref.startsWith('http') ? 'noopener noreferrer' : undefined}
+        >
+          Become a member
+        </a>
       </nav>
 
       <p className={styles.copyright}>

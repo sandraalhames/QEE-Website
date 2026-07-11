@@ -28,8 +28,8 @@ const Hero = () => (
       </p>
       <Countdown />
       <div className={styles.actions}>
-        <Button to="/registration" variant="glow">Register interest</Button>
-        <Button to="/schedule" variant="ghost">View schedule</Button>
+        <Button to="/events/qompute/register" variant="glow">Register interest</Button>
+        <Button to="/events/qompute/schedule" variant="ghost">View schedule</Button>
       </div>
     </Container>
   </section>

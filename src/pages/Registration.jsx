@@ -4,9 +4,6 @@ import Button from '../components/ui/Button';
 import event from '../content/event';
 import styles from './Registration.module.css';
 
-// TODO: replace with the real Google Form URL once it's built.
-const REGISTRATION_FORM_URL = null;
-
 const DETAILS = [
   { k: 'when', v: `${event.finalEventDateLabel} is conference day; virtual challenges run in the weeks prior` },
   { k: 'where', v: 'USC campus, Los Angeles (venue announced with the schedule)' },
@@ -37,8 +34,8 @@ const Registration = () => (
         ))}
       </dl>
 
-      {REGISTRATION_FORM_URL ? (
-        <Button href={REGISTRATION_FORM_URL} variant="primary">Open registration form</Button>
+      {event.registerFormUrl ? (
+        <Button href={event.registerFormUrl} variant="primary">Open registration form</Button>
       ) : (
         <div className={styles.notify}>
           <p className={styles.tba}>

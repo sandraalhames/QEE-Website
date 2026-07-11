@@ -54,6 +54,9 @@
   --space-5: 4rem;
   --space-6: 6rem;
 
+  /* ---- Component sizes ---- */
+  --navbar-height: 5.6rem;
+
   /* ---- Layout ---- */
   --content-max-width: 1120px;
   --radius: 8px;
