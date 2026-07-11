@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import qeeMark from '../../assets/qee-mark.png';
 import event from '../../content/event';
 import styles from './Navbar.module.css';
@@ -41,15 +41,28 @@ const Navbar = () => {
 
         <nav aria-label="Primary" className={`${styles.nav} ${isOpen ? styles.navOpen : ''}`.trim()}>
           {NAV_LINKS.map((link) => (
-            <NavLink
-              key={link.to}
-              to={link.to}
-              end={link.end}
-              className={navLinkClass}
-              onClick={() => setIsOpen(false)}
-            >
-              {link.label}
-            </NavLink>
+            // hash links (e.g. /#about) use a plain Link so they don't claim
+            // route-active state (aria-current) on the Home path
+            link.to.includes('#') ? (
+              <Link
+                key={link.to}
+                to={link.to}
+                className={styles.link}
+                onClick={() => setIsOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ) : (
+              <NavLink
+                key={link.to}
+                to={link.to}
+                end={link.end}
+                className={navLinkClass}
+                onClick={() => setIsOpen(false)}
+              >
+                {link.label}
+              </NavLink>
+            )
           ))}
           <a
             href={memberHref}
