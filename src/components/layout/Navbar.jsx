@@ -44,7 +44,7 @@ const Navbar = () => {
             <NavLink
               key={link.to}
               to={link.to}
-              end={link.to === '/'}
+              end={link.end}
               className={navLinkClass}
               onClick={() => setIsOpen(false)}
             >
