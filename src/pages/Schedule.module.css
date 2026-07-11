@@ -62,7 +62,7 @@
 .date {
   font-family: var(--font-mono);
   font-size: 1.25rem;
-  color: var(--color-teal-deep);
+  color: var(--color-teal-text);
   margin: 0 0 0.3rem;
 }
 
@@ -86,7 +86,7 @@
 
 .legendGate {
   font-family: var(--font-mono);
-  color: var(--color-teal-deep);
+  color: var(--color-teal-text);
   border: 1px solid var(--color-teal);
   border-radius: 3px;
   padding: 0 0.5rem;

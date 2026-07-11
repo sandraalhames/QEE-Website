@@ -17,6 +17,7 @@ const Registration = () => (
   <section className={styles.section}>
     <Container className={styles.inner}>
       <SectionHeading
+        as="h1"
         eyebrow="registration"
         title="Sign up for Qompute in LA"
         subtitle="Registration opens soon via Google Form."

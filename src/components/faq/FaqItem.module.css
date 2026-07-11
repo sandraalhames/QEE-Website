@@ -28,7 +28,7 @@
 
 .chevron {
   font-family: var(--font-mono);
-  color: var(--color-teal-deep);
+  color: var(--color-teal-text);
   transition: transform 0.2s ease;
   flex: none;
 }

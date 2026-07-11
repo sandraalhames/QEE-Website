@@ -12,7 +12,7 @@ const Footer = () => (
         <a href="mailto:qee@usc.edu" className={styles.email}>qee@usc.edu</a>
       </div>
 
-      <nav className={styles.links}>
+      <nav aria-label="Footer" className={styles.links}>
         <a href="https://www.linkedin.com/company/quantum-engineering-ethics/" target="_blank" rel="noopener noreferrer">
           LinkedIn
         </a>

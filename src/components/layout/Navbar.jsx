@@ -37,7 +37,7 @@ const Navbar = () => {
           <span className={styles.toggleBar} />
         </button>
 
-        <nav className={`${styles.nav} ${isOpen ? styles.navOpen : ''}`.trim()}>
+        <nav aria-label="Primary" className={`${styles.nav} ${isOpen ? styles.navOpen : ''}`.trim()}>
           {NAV_LINKS.map((link) => (
             <NavLink
               key={link.to}

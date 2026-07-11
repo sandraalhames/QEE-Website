@@ -43,7 +43,7 @@
 .role {
   font-family: var(--font-mono);
   font-size: 1.25rem;
-  color: var(--color-teal-deep);
+  color: var(--color-teal-text);
   margin: 0 0 var(--space-1);
 }
 

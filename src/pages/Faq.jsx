@@ -8,6 +8,7 @@ const Faq = () => (
   <section className={styles.section}>
     <Container>
       <SectionHeading
+        as="h1"
         eyebrow="faq"
         title="Frequently asked questions"
         subtitle="Can't find your answer? Email qee@usc.edu and we'll get back to you."

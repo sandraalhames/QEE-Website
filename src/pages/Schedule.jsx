@@ -10,6 +10,7 @@ const Schedule = () => (
   <section className={styles.section}>
     <Container>
       <SectionHeading
+        as="h1"
         eyebrow="schedule"
         title="How the event flows"
         subtitle="Dates for the virtual phases are being finalized. The conference day is locked."
