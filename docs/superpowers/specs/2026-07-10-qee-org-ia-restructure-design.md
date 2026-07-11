@@ -19,12 +19,12 @@ This is an information-architecture pivot, not a rebuild. The homepage is alread
 ## Target site map
 
 ### Org (top level, permanent)
-- `/` — **Home.** Org landing. Sections: reworded org Hero, About, Countdown (reframed as a teaser to the flagship event, links into `/events/qompute`), Sponsors, TeamPreview. Primary CTA → **Become a QEE member** (join form). "Three ways in" removed from here.
+- `/` — **Home.** Org landing. Sections: reworded org Hero (org identity + **Become a QEE member** CTA + a Countdown teaser to the flagship event that links into `/events/qompute`), About, TeamPreview. **"Three ways in" and Sponsors both removed from Home** (Sponsors moves to the hackathon landing). No dedicated "Get Involved" section — the member CTA lives in the nav and the org hero only.
 - `/team` — org team (unchanged content/component).
 
 ### Events
 - `/events` — `<Navigate to="/events/qompute" replace />` (redirect, no page yet).
-- `/events/qompute` — **Hackathon landing.** Its own Hero ("Qompute in LA" — the current homepage Hero content moves here), Countdown, "Three ways in" (`Expect`), hackathon **Register** CTA, and a section sub-nav. Serves as the hub for the event's subpages.
+- `/events/qompute` — **Hackathon landing.** Its own Hero ("Qompute in LA" — the current homepage Hero content moves here), Countdown, "Three ways in" (`Expect`), **Sponsors** (event sponsors, moved off Home), hackathon **Register** CTA, and a section sub-nav. Serves as the hub for the event's subpages.
 - `/events/qompute/schedule`
 - `/events/qompute/speakers`  ← Speakers is now a subpage of the hackathon
 - `/events/qompute/faq`
@@ -69,8 +69,8 @@ Moved / re-parented (files may stay in place; routing changes):
 Edited:
 - `src/App.jsx` — nested route tree under `/events/qompute`, redirect routes for old flat paths and `/events`.
 - `src/components/layout/Navbar.jsx` — top-level org nav + "Become a member" CTA; drop hackathon links from the global nav.
-- `src/pages/Home.jsx` — swap `Hero`→`OrgHero`, remove `Expect`, keep About/Sponsors/TeamPreview; add member CTA.
-- `src/components/home/Expect.jsx` — unchanged component, now rendered on the Qompute landing instead of Home.
+- `src/pages/Home.jsx` — swap `Hero`→`OrgHero`, remove `Expect` and `Sponsors`, keep About/TeamPreview.
+- `src/components/home/Expect.jsx` and `src/components/home/Sponsors.jsx` — unchanged components, now rendered on the Qompute landing instead of Home.
 - `src/content/` — add `src/content/qompute.js` (or extend `event.js`) so event metadata (name, dates, CTAs) is centralized; add join-form + register URLs here (stubbed).
 
 Build / SEO plumbing (must track the new routes):
