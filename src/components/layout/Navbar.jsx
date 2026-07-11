@@ -1,16 +1,18 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import qeeMark from '../../assets/qee-mark.png';
+import event from '../../content/event';
 import styles from './Navbar.module.css';
 
 const NAV_LINKS = [
-  { to: '/', label: 'Home' },
-  { to: '/schedule', label: 'Schedule' },
-  { to: '/speakers', label: 'Speakers' },
-  { to: '/faq', label: 'FAQ' },
-  { to: '/team', label: 'Team' },
-  { to: '/resources', label: 'Resources' },
+  { to: '/', label: 'Home', end: true },
+  { to: '/#about', label: 'About', end: false },
+  { to: '/events/qompute', label: 'Events', end: false },
+  { to: '/team', label: 'Team', end: false },
 ];
+
+const memberHref = event.joinFormUrl
+  || 'mailto:qee@usc.edu?subject=Joining%20QEE';
 
 const navLinkClass = ({ isActive }) => `${styles.link} ${isActive ? styles.linkActive : ''}`.trim();
 
@@ -22,7 +24,7 @@ const Navbar = () => {
       <div className={styles.inner}>
         <NavLink to="/" className={styles.brand} onClick={() => setIsOpen(false)}>
           <img src={qeeMark} alt="QEE logo" className={styles.logo} />
-          <span>Qompute in LA</span>
+          <span>QEE</span>
         </NavLink>
 
         <button
@@ -49,9 +51,15 @@ const Navbar = () => {
               {link.label}
             </NavLink>
           ))}
-          <NavLink to="/registration" className={styles.cta} onClick={() => setIsOpen(false)}>
-            Register
-          </NavLink>
+          <a
+            href={memberHref}
+            className={styles.cta}
+            target={memberHref.startsWith('http') ? '_blank' : undefined}
+            rel={memberHref.startsWith('http') ? 'noopener noreferrer' : undefined}
+            onClick={() => setIsOpen(false)}
+          >
+            Become a member
+          </a>
         </nav>
       </div>
     </header>
