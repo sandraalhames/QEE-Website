@@ -11,78 +11,85 @@ import { fileURLToPath } from 'node:url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const distDir = path.join(__dirname, '..', 'dist');
 
-// Copy grounded in src/content/event.js: Qompute in LA is USC Quantum
-// Engineering Ethics' quantum computing hackathon, virtual challenges
-// leading to a single in-person conference day at USC on October 4, 2026.
+// Copy grounded in src/content/event.js. Nested event routes get their own
+// meta; legacy flat routes redirect client-side, so their canonical points at
+// the nested target to consolidate SEO signals.
 const ROUTES = {
-  schedule: {
-    title: 'Schedule | QEE',
-    description: "See the Qompute in LA schedule: virtual challenges leading up to the in-person conference day at USC on October 4, 2026, with talks and workshops.",
+  'events/qompute': {
+    title: 'Qompute in LA | QEE',
+    description: "USC Quantum Engineering Ethics' quantum computing hackathon: virtual challenges leading to an in-person conference day at USC on October 4, 2026.",
   },
-  speakers: {
-    title: 'Speakers | QEE',
-    description: "Meet the speakers and panelists for Qompute in LA, USC Quantum Engineering Ethics' quantum computing conference day on October 4, 2026.",
+  'events/qompute/schedule': {
+    title: 'Schedule | Qompute in LA',
+    description: "The Qompute in LA schedule: virtual challenges leading up to the in-person conference day at USC on October 4, 2026, with talks and workshops.",
   },
-  faq: {
-    title: 'FAQ | QEE',
-    description: "Answers to common questions about Qompute in LA, USC Quantum Engineering Ethics' quantum computing hackathon and conference day on October 4, 2026.",
+  'events/qompute/speakers': {
+    title: 'Speakers | Qompute in LA',
+    description: "Meet the speakers and panelists for Qompute in LA, the USC Quantum Engineering Ethics conference day on October 4, 2026.",
   },
-  registration: {
-    title: 'Register | QEE',
-    description: "Register for Qompute in LA, USC Quantum Engineering Ethics' quantum computing hackathon culminating in a conference day at USC on October 4, 2026.",
+  'events/qompute/faq': {
+    title: 'FAQ | Qompute in LA',
+    description: "Answers to common questions about Qompute in LA, the USC Quantum Engineering Ethics hackathon and conference day on October 4, 2026.",
   },
-  resources: {
-    title: 'Resources | QEE',
+  'events/qompute/resources': {
+    title: 'Resources | Qompute in LA',
     description: "Learning resources to take you from zero to writing quantum circuits before Qompute in LA's conference day at USC on October 4, 2026.",
+  },
+  'events/qompute/register': {
+    title: 'Register | Qompute in LA',
+    description: "Register for Qompute in LA, the USC Quantum Engineering Ethics quantum computing hackathon culminating in a conference day on October 4, 2026.",
   },
   team: {
     title: 'Team | QEE',
-    description: "Meet the USC students on the Quantum Engineering Ethics e-board organizing Qompute in LA, the quantum computing conference day on October 4, 2026.",
+    description: "Meet the USC students on the Quantum Engineering Ethics e-board organizing Qompute in LA and the org's quantum computing events.",
   },
+  // legacy redirect folders: canonical -> nested target
+  schedule: { canonical: 'events/qompute/schedule' },
+  speakers: { canonical: 'events/qompute/speakers' },
+  faq: { canonical: 'events/qompute/faq' },
+  registration: { canonical: 'events/qompute/register' },
+  resources: { canonical: 'events/qompute/resources' },
 };
 
-// Targeted patterns matched against the exact tags currently emitted by the
-// source index.html (see index.html <head>). Each pattern is scoped tightly
-// enough to hit only its own tag and not neighboring meta tags.
-function injectRoute(route, { title, description }) {
+function injectRoute(route, { title, description, canonical }) {
   const filePath = path.join(distDir, route, 'index.html');
   if (!existsSync(filePath)) {
     throw new Error(`inject-meta: expected ${filePath} to exist (run the postbuild copy step first).`);
   }
 
   let html = readFileSync(filePath, 'utf8');
-  const canonicalUrl = `https://qeesc.org/${route}`;
+  const canonicalUrl = `https://qeesc.org/${canonical || route}`;
 
-  html = html.replace(/<title>[^<]*<\/title>/, `<title>${title}</title>`);
+  if (title) {
+    html = html.replace(/<title>[^<]*<\/title>/, `<title>${title}</title>`);
+    html = html.replace(
+      /<meta property="og:title" content="[^"]*"\s*\/>/,
+      `<meta property="og:title" content="${title}" />`,
+    );
+    html = html.replace(
+      /<meta name="twitter:title" content="[^"]*"\s*\/>/,
+      `<meta name="twitter:title" content="${title}" />`,
+    );
+  }
 
-  html = html.replace(
-    /<meta name="description" content="[^"]*"\s*\/>/,
-    `<meta name="description" content="${description}" />`,
-  );
-
-  html = html.replace(
-    /<meta property="og:title" content="[^"]*"\s*\/>/,
-    `<meta property="og:title" content="${title}" />`,
-  );
-
-  html = html.replace(
-    /<meta property="og:description" content="[^"]*"\s*\/>/,
-    `<meta property="og:description" content="${description}" />`,
-  );
+  if (description) {
+    html = html.replace(
+      /<meta name="description" content="[^"]*"\s*\/>/,
+      `<meta name="description" content="${description}" />`,
+    );
+    html = html.replace(
+      /<meta property="og:description" content="[^"]*"\s*\/>/,
+      `<meta property="og:description" content="${description}" />`,
+    );
+    html = html.replace(
+      /<meta name="twitter:description" content="[^"]*"\s*\/>/,
+      `<meta name="twitter:description" content="${description}" />`,
+    );
+  }
 
   html = html.replace(
     /<meta property="og:url" content="[^"]*"\s*\/>/,
     `<meta property="og:url" content="${canonicalUrl}" />`,
-  );
-
-  html = html.replace(
-    /<meta name="twitter:title" content="[^"]*"\s*\/>/,
-    `<meta name="twitter:title" content="${title}" />`,
-  );
-
-  html = html.replace(
-    /<meta name="twitter:description" content="[^"]*"\s*\/>/,
-    `<meta name="twitter:description" content="${description}" />`,
   );
 
   if (/<link rel="canonical" href="[^"]*"\s*\/>/.test(html)) {
