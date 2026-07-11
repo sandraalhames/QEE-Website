@@ -1,7 +1,11 @@
 import { Outlet } from 'react-router-dom';
+import EventSubnav from '../../components/events/EventSubnav';
 
 const QomputeLayout = () => (
-  <Outlet />
+  <>
+    <EventSubnav />
+    <Outlet />
+  </>
 );
 
 export default QomputeLayout;
