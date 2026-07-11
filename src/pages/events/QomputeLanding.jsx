@@ -1,5 +1,13 @@
+import Hero from '../../components/home/Hero';
+import Expect from '../../components/home/Expect';
+import Sponsors from '../../components/home/Sponsors';
+
 const QomputeLanding = () => (
-  <section style={{ minHeight: '50vh' }} />
+  <>
+    <Hero />
+    <Expect />
+    <Sponsors />
+  </>
 );
 
 export default QomputeLanding;
