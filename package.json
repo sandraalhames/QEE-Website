@@ -8,7 +8,9 @@
     "build": "vite build",
     "postbuild": "cp dist/index.html dist/404.html && for r in team events events/qompute events/qompute/schedule events/qompute/speakers events/qompute/faq events/qompute/resources events/qompute/register schedule speakers faq registration resources; do mkdir -p dist/$r && cp dist/index.html dist/$r/index.html; done && node scripts/inject-meta.mjs",
     "preview": "vite preview",
-    "lint": "eslint src --ext .js,.jsx"
+    "lint": "eslint src --ext .js,.jsx",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "prop-types": "^15.8.1",
@@ -17,6 +19,9 @@
     "react-router-dom": "^6.26.0"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
     "@vitejs/plugin-react": "^4.3.1",
     "eslint": "^8.57.0",
     "eslint-config-airbnb": "^19.0.4",
@@ -24,6 +29,8 @@
     "eslint-plugin-jsx-a11y": "^6.9.0",
     "eslint-plugin-react": "^7.35.0",
     "eslint-plugin-react-hooks": "^4.6.2",
-    "vite": "^5.4.0"
+    "jsdom": "^25.0.1",
+    "vite": "^5.4.0",
+    "vitest": "^2.1.9"
   }
 }
