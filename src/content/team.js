@@ -1,6 +1,5 @@
 // TODO: confirm real titles for each member (all currently generic 'E-Board
-// Member'), Sandra's LinkedIn, and fill in Laila once her headshot arrives.
-// For each member:
+// Member') and fill in Laila once her headshot arrives. For each member:
 //   name     : full name
 //   role     : e.g. 'President', 'VP of Events'
 //   photo    : import a 400x400+ square headshot from src/assets/team/ and
@@ -34,7 +33,7 @@ const team = [
     name: 'Sandra Al Hames',
     role: 'E-Board Member',
     photo: sandraAlHames,
-    linkedin: null,
+    linkedin: 'https://www.linkedin.com/in/sandra-al-hames/',
   },
   {
     name: null, role: 'E-Board Member', photo: null, linkedin: null,
