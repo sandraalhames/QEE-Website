@@ -1,25 +1,40 @@
-// TODO: fill in the real e-board roster. For each member:
+// TODO: confirm real titles for each member (all currently generic 'E-Board
+// Member'), Sandra's LinkedIn, and fill in Laila once her headshot arrives.
+// For each member:
 //   name     : full name
 //   role     : e.g. 'President', 'VP of Events'
-//   photo    : import a 400x400+ square headshot into src/assets/team/ and
+//   photo    : import a 400x400+ square headshot from src/assets/team/ and
 //              reference it here; leave null for the placeholder avatar
 //   linkedin : profile URL, or null to hide the link
-// Add or remove entries to match the real headcount.
+import aidenFox from '../assets/team/aiden-fox.jpg';
+import peterMaiConnolly from '../assets/team/peter-mai-connolly.jpg';
+import sandraAlHames from '../assets/team/sandra-al-hames.jpg';
+import tinaHabibi from '../assets/team/tina-habibi.jpg';
+
 const team = [
   {
-    name: null, role: 'President', photo: null, linkedin: null,
+    name: 'Aiden Fox',
+    role: 'E-Board Member',
+    photo: aidenFox,
+    linkedin: 'https://www.linkedin.com/in/aidenfox',
   },
   {
-    name: null, role: 'Vice President', photo: null, linkedin: null,
+    name: 'Tina Habibi',
+    role: 'E-Board Member',
+    photo: tinaHabibi,
+    linkedin: 'https://www.linkedin.com/in/tina-habibi',
   },
   {
-    name: null, role: 'E-Board Member', photo: null, linkedin: null,
+    name: 'Peter Mai Connolly',
+    role: 'E-Board Member',
+    photo: peterMaiConnolly,
+    linkedin: 'https://www.linkedin.com/in/peter-mai-connolly/',
   },
   {
-    name: null, role: 'E-Board Member', photo: null, linkedin: null,
-  },
-  {
-    name: null, role: 'E-Board Member', photo: null, linkedin: null,
+    name: 'Sandra Al Hames',
+    role: 'E-Board Member',
+    photo: sandraAlHames,
+    linkedin: null,
   },
   {
     name: null, role: 'E-Board Member', photo: null, linkedin: null,
