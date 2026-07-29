@@ -11,7 +11,7 @@ const Team = () => (
         as="h1"
         eyebrow="team"
         title="Meet the e-board"
-        subtitle="The USC students behind QEE and Qompute in LA. Names and photos landing soon."
+        subtitle="The USC students behind QEE and Qompute in LA."
       />
       <div className={styles.grid}>
         {team.map((member, index) => (
