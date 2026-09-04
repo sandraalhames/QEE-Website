@@ -2,7 +2,7 @@
 const faq = [
   {
     q: 'What is Qompute in LA?',
-    a: 'A quantum computing & ethics hackathon run by Quantum Engineering Ethics (QEE) at USC. Virtual challenges run in the weeks leading up to an in-person conference day of talks, workshops, panels, and merch at USC on October 4, 2026.',
+    a: 'A quantum computing & ethics hackathon run by Quantum Engineering Ethics (QEE) at USC. Virtual challenges run in the weeks leading up to an in-person conference day of talks, workshops, panels, and merch at USC on October 18, 2026.',
   },
   {
     q: 'Who can attend?',

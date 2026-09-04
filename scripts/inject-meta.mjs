@@ -17,27 +17,27 @@ const distDir = path.join(__dirname, '..', 'dist');
 const ROUTES = {
   'events/qompute': {
     title: 'Qompute in LA | QEE',
-    description: "USC Quantum Engineering Ethics' quantum computing hackathon: virtual challenges leading to an in-person conference day at USC on October 4, 2026.",
+    description: "USC Quantum Engineering Ethics' quantum computing hackathon: virtual challenges leading to an in-person conference day at USC on October 18, 2026.",
   },
   'events/qompute/schedule': {
     title: 'Schedule | Qompute in LA',
-    description: "The Qompute in LA schedule: virtual challenges leading up to the in-person conference day at USC on October 4, 2026, with talks and workshops.",
+    description: "The Qompute in LA schedule: virtual challenges leading up to the in-person conference day at USC on October 18, 2026, with talks and workshops.",
   },
   'events/qompute/speakers': {
     title: 'Speakers | Qompute in LA',
-    description: "Meet the speakers and panelists for Qompute in LA, the USC Quantum Engineering Ethics conference day on October 4, 2026.",
+    description: "Meet the speakers and panelists for Qompute in LA, the USC Quantum Engineering Ethics conference day on October 18, 2026.",
   },
   'events/qompute/faq': {
     title: 'FAQ | Qompute in LA',
-    description: "Answers to common questions about Qompute in LA, the USC Quantum Engineering Ethics hackathon and conference day on October 4, 2026.",
+    description: "Answers to common questions about Qompute in LA, the USC Quantum Engineering Ethics hackathon and conference day on October 18, 2026.",
   },
   'events/qompute/resources': {
     title: 'Resources | Qompute in LA',
-    description: "Learning resources to take you from zero to writing quantum circuits before Qompute in LA's conference day at USC on October 4, 2026.",
+    description: "Learning resources to take you from zero to writing quantum circuits before Qompute in LA's conference day at USC on October 18, 2026.",
   },
   'events/qompute/register': {
     title: 'Register | Qompute in LA',
-    description: "Register for Qompute in LA, the USC Quantum Engineering Ethics quantum computing hackathon culminating in a conference day on October 4, 2026.",
+    description: "Register for Qompute in LA, the USC Quantum Engineering Ethics quantum computing hackathon culminating in a conference day on October 18, 2026.",
   },
   team: {
     title: 'Team | QEE',
