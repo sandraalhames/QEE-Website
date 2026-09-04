@@ -49,7 +49,7 @@ const Schedule = () => (
       <DayOfAgenda />
       <div className={styles.calendar}>
         <Button href={event.gcalUrl} variant="secondary">
-          Add Oct 4 to Google Calendar
+          Add Oct 18 to Google Calendar
         </Button>
       </div>
     </Container>

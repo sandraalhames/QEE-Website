@@ -1,4 +1,4 @@
-// Conference-day agenda skeleton, October 4, 2026.
+// Conference-day agenda skeleton, October 18, 2026.
 // TODO: fill real times/locations/titles when the run-of-show is locked.
 // Blocks below reflect the confirmed format (talks, workshops, panels,
 // merch); times stay null until scheduled so the page renders "time tba".

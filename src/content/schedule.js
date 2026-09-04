@@ -1,5 +1,5 @@
 // TODO: fill real dates from the projected-dates table when it arrives.
-// Only the final conference day (Oct 4) is confirmed so far.
+// Only the final conference day (Oct 18) is confirmed so far.
 // Gates form a real circuit: |0⟩ initialize → H superpose → CX entangle → M measure.
 const schedule = [
   {
@@ -23,7 +23,7 @@ const schedule = [
   {
     gate: 'M',
     label: 'Conference day @ USC',
-    date: 'October 4, 2026',
+    date: 'October 18, 2026',
     confirmed: true,
     detail: 'Measure: the in-person finale, with keynote talks, hands-on workshops, panels, and merch.',
   },

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import styles from './Countdown.module.css';
 
-const TARGET = new Date('2026-10-04T00:00:00-07:00').getTime();
+const TARGET = new Date('2026-10-18T00:00:00-07:00').getTime();
 const DAY_MS = 24 * 60 * 60 * 1000;
 
 const partsUntil = (now) => {

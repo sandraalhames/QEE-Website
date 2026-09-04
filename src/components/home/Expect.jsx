@@ -17,7 +17,7 @@ const TRACKS = [
   {
     ket: 'connect',
     title: 'Conference day',
-    body: 'October 4 at USC: keynote talks, panels on quantum ethics, hands-on workshops, merch, and the people building the field.',
+    body: 'October 18 at USC: keynote talks, panels on quantum ethics, hands-on workshops, merch, and the people building the field.',
   },
 ];
 
