@@ -17,7 +17,7 @@ const Registration = () => (
         as="h1"
         eyebrow="registration"
         title="Sign up for Qompute in LA"
-        subtitle="Registration opens soon via Google Form."
+        subtitle="Registration is open. Sign-ups run through the Google Form below."
         align="center"
       />
 
