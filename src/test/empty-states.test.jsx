@@ -14,8 +14,9 @@ describe('placeholder empty states', () => {
     expect((await screen.findAllByText(/coming soon/i)).length).toBeGreaterThan(0);
   });
 
-  it('sponsors shows the finalizing placeholder on the qompute landing', async () => {
+  it('shows supporter logos under the Past and Current Supporters heading', async () => {
     renderAt('/events/qompute');
-    expect(await screen.findByText(/sponsor lineup is being finalized/i)).toBeInTheDocument();
+    expect(await screen.findByRole('heading', { name: 'Past and Current Supporters' })).toBeInTheDocument();
+    expect(screen.getByAltText('Center for Quantum Networks')).toBeInTheDocument();
   });
 });

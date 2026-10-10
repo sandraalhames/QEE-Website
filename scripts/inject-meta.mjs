@@ -43,6 +43,22 @@ const ROUTES = {
     title: 'Team | QEE',
     description: "Meet the USC students on the Quantum Engineering Ethics e-board organizing Qompute in LA and the org's quantum computing events.",
   },
+  'q3-initiative': {
+    title: 'Q³ Initiative | QEE',
+    description: "The Q³ Initiative from USC Quantum Engineering Ethics.",
+  },
+  'events/qompute-2025': {
+    title: 'Qompute 2025 | QEE',
+    description: "Qompute 2025, USC Quantum Engineering Ethics' quantum hackathon with challenges provided by IBM Quantum and completed in Qiskit.",
+  },
+  'events/lecture-series': {
+    title: 'Lecture Series | QEE',
+    description: "The USC Quantum Engineering Ethics lecture series on quantum computing and the ethics of emerging technology.",
+  },
+  'events/lab-tour': {
+    title: 'Lab Tour | QEE',
+    description: "Quantum research lab tours hosted by USC Quantum Engineering Ethics.",
+  },
   // legacy redirect folders: canonical -> nested target
   schedule: { canonical: 'events/qompute/schedule' },
   speakers: { canonical: 'events/qompute/speakers' },

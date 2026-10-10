@@ -9,6 +9,10 @@ describe('per-route document.title', () => {
   it.each([
     ['/', 'QEE · USC Quantum Engineering Ethics'],
     ['/team', 'Team | QEE'],
+    ['/q3-initiative', 'Q³ Initiative | QEE'],
+    ['/events/qompute-2025', 'Qompute 2025 | QEE'],
+    ['/events/lecture-series', 'Lecture Series | QEE'],
+    ['/events/lab-tour', 'Lab Tour | QEE'],
     ['/events/qompute', 'Qompute in LA | QEE'],
     ['/events/qompute/schedule', 'Schedule | Qompute in LA'],
     ['/events/qompute/speakers', 'Speakers | Qompute in LA'],

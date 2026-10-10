@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://qeesc.org/</loc></url>
   <url><loc>https://qeesc.org/team</loc></url>
+  <url><loc>https://qeesc.org/q3-initiative</loc></url>
+  <url><loc>https://qeesc.org/events/qompute-2025</loc></url>
+  <url><loc>https://qeesc.org/events/lecture-series</loc></url>
+  <url><loc>https://qeesc.org/events/lab-tour</loc></url>
   <url><loc>https://qeesc.org/events/qompute</loc></url>
   <url><loc>https://qeesc.org/events/qompute/schedule</loc></url>
   <url><loc>https://qeesc.org/events/qompute/speakers</loc></url>

@@ -14,6 +14,8 @@ const Faq = lazy(() => import('./pages/Faq'));
 const Registration = lazy(() => import('./pages/Registration'));
 const Resources = lazy(() => import('./pages/Resources'));
 const NotFound = lazy(() => import('./pages/NotFound'));
+const EventPage = lazy(() => import('./pages/events/EventPage'));
+const Q3Initiative = lazy(() => import('./pages/Q3Initiative'));
 
 // wraps just the routed page, not Layout, so Navbar/Footer never
 // unmount/flash while a lazy page chunk is loading
@@ -32,6 +34,7 @@ export const AppRoutes = () => (
     <Route element={<Layout />}>
       <Route index element={withSuspense(<Home />)} />
       <Route path="team" element={withSuspense(<Team />)} />
+      <Route path="q3-initiative" element={withSuspense(<Q3Initiative />)} />
 
       <Route path="events">
         <Route index element={<Navigate to="/events/qompute" replace />} />
@@ -43,6 +46,9 @@ export const AppRoutes = () => (
           <Route path="resources" element={withSuspense(<Resources />)} />
           <Route path="register" element={withSuspense(<Registration />)} />
         </Route>
+        <Route path="qompute-2025" element={withSuspense(<EventPage slug="qompute-2025" />)} />
+        <Route path="lecture-series" element={withSuspense(<EventPage slug="lecture-series" />)} />
+        <Route path="lab-tour" element={withSuspense(<EventPage slug="lab-tour" />)} />
       </Route>
 
       {/* legacy flat URLs -> nested paths (preserve old links/QR/SEO) */}

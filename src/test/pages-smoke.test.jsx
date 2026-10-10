@@ -7,6 +7,10 @@ import { renderAt } from './utils';
 const ROUTES = [
   { path: '/', heading: /done ethically/i },
   { path: '/team', heading: /meet the e-board/i },
+  { path: '/q3-initiative', heading: /q³ initiative/i },
+  { path: '/events/qompute-2025', heading: /qompute 2025/i },
+  { path: '/events/lecture-series', heading: /lecture series/i },
+  { path: '/events/lab-tour', heading: /lab tour/i },
   { path: '/events/qompute', heading: /qompute in la/i },
   { path: '/events/qompute/schedule', heading: /how the event flows/i },
   { path: '/events/qompute/speakers', heading: /talks and panels/i },

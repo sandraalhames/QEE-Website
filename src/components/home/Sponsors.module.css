@@ -13,12 +13,19 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: var(--space-4);
+  gap: var(--space-3) var(--space-4);
+}
+
+.logoLink {
+  display: inline-flex;
+  align-items: center;
 }
 
 .logoLink img {
-  max-height: 48px;
+  max-height: 56px;
+  max-width: 160px;
   width: auto;
+  object-fit: contain;
   filter: grayscale(1);
   opacity: 0.75;
   transition: opacity 0.2s ease, filter 0.2s ease;
