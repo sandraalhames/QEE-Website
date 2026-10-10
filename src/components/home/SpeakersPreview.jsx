@@ -14,8 +14,8 @@ const SpeakersPreview = () => {
       <Container>
         <SectionHeading
           eyebrow="speakers"
-          title="Event speakers"
-          subtitle="Click a speaker to read their bio."
+          title="Speakers"
+          subtitle="Meet the people joining us on October 18. Click a speaker to read their bio."
           align="center"
         />
         <SpeakerGrid />

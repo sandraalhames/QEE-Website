@@ -1,15 +1,28 @@
-// Confirmed Qompute 2026 speakers, from the bios and photos they sent.
+// Qompute 2026 speakers, in display order.
 //   name   : full name
-//   title  : role and organization, shown under the photo
-//   bio    : full bio, shown when the card is opened
+//   title  : organization, shown under the role on the card
+//   bio    : list of paragraphs shown when the card is opened; [] shows "Bio coming soon"
 //   photo  : import a headshot from src/assets/speakers/, or null for the placeholder
 //   kind   : 'keynote' | 'panelist' | 'workshop'
-// TODO: add headshots. Florenta Teodoridis and Ricky Young emailed photos;
-// save them to src/assets/speakers/ and import them below.
+// TODO: add headshots and the remaining bios as speakers send them.
 const speakers = [
   {
+    name: 'Sophy Shin',
+    title: 'IBM Quantum',
+    kind: 'keynote',
+    photo: null,
+    bio: [],
+  },
+  {
+    name: 'Aaron Wirthwein',
+    title: 'USC',
+    kind: 'panelist',
+    photo: null,
+    bio: [],
+  },
+  {
     name: 'Florenta Teodoridis',
-    title: 'Associate Professor of Management and Organization, USC Marshall School of Business',
+    title: 'USC',
     kind: 'panelist',
     photo: null,
     bio: [
@@ -19,8 +32,29 @@ const speakers = [
     ],
   },
   {
+    name: 'Rosa Di Felice',
+    title: 'USC',
+    kind: 'panelist',
+    photo: null,
+    bio: [],
+  },
+  {
+    name: 'Siclali Loya',
+    title: 'Deloitte',
+    kind: 'panelist',
+    photo: null,
+    bio: [],
+  },
+  {
+    name: 'Catherine Potts',
+    title: 'D-Wave',
+    kind: 'panelist',
+    photo: null,
+    bio: [],
+  },
+  {
     name: 'Ricky Young',
-    title: 'COO, qBraid',
+    title: 'qBraid',
     kind: 'workshop',
     photo: null,
     bio: [

@@ -62,6 +62,13 @@
   color: var(--color-navy);
 }
 
+.role {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.45rem;
+  color: var(--color-teal-text);
+}
+
 .title {
   font-size: 1.4rem;
   color: var(--color-ink-soft);

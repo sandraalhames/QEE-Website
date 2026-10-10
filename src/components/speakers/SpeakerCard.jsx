@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import styles from './SpeakerCard.module.css';
 
-const KIND_LABEL = { keynote: 'keynote', panelist: 'panelist', workshop: 'workshop' };
+const KIND_LABEL = { keynote: 'Keynote Speaker', panelist: 'Panelist', workshop: 'Workshop Host' };
 
 const Photo = ({ photo = null, name, className }) => (photo ? (
   <img src={photo} alt={name} className={className} />
@@ -62,14 +62,10 @@ const SpeakerCard = ({
         aria-controls={dialogId}
       >
         <Photo photo={photo} name={name} className={styles.photo} />
-        <span className={styles.kind}>
-          <span className={styles.bracket}>|</span>
-          {KIND_LABEL[kind]}
-          <span className={styles.bracket}>⟩</span>
-        </span>
         <span className={styles.name}>{name}</span>
+        <span className={styles.role}>{KIND_LABEL[kind]}</span>
         <span className={styles.title}>{title}</span>
-        <span className={styles.more}>Read bio →</span>
+        <span className={styles.more}>{bio.length ? 'Read bio →' : 'Bio coming soon'}</span>
       </button>
 
       {open && (
@@ -98,17 +94,12 @@ const SpeakerCard = ({
             <div className={styles.dialogHead}>
               <Photo photo={photo} name={name} className={styles.dialogPhoto} />
               <div>
-                <span className={styles.kind}>
-                  <span className={styles.bracket}>|</span>
-                  {KIND_LABEL[kind]}
-                  <span className={styles.bracket}>⟩</span>
-                </span>
                 <h3 id={`${dialogId}-name`} className={styles.dialogName}>{name}</h3>
-                <p className={styles.dialogTitle}>{title}</p>
+                <p className={styles.dialogTitle}>{`${KIND_LABEL[kind]} · ${title}`}</p>
               </div>
             </div>
             <div className={styles.bio}>
-              {bio.map((p) => <p key={p}>{p}</p>)}
+              {bio.length ? bio.map((p) => <p key={p}>{p}</p>) : <p>Bio coming soon.</p>}
             </div>
           </div>
         </div>
