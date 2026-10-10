@@ -1,5 +1,5 @@
-// TODO: confirm real titles for each member (all currently generic 'E-Board
-// Member') and fill in Laila once her headshot arrives. For each member:
+// TODO: confirm real titles for the remaining members (currently generic
+// 'E-Board Member') and fill in Laila once her headshot arrives. For each member:
 //   name     : full name
 //   role     : e.g. 'President', 'VP of Events'
 //   photo    : import a 400x400+ square headshot from src/assets/team/ and
@@ -11,6 +11,12 @@ import sandraAlHames from '../assets/team/sandra-al-hames.jpg';
 import tinaHabibi from '../assets/team/tina-habibi.jpg';
 
 const team = [
+  {
+    name: 'Sandra Al Hames',
+    role: 'President and Founder',
+    photo: sandraAlHames,
+    linkedin: 'https://www.linkedin.com/in/sandra-al-hames/',
+  },
   {
     name: 'Aiden Fox',
     role: 'E-Board Member',
@@ -28,12 +34,6 @@ const team = [
     role: 'E-Board Member',
     photo: peterMaiConnolly,
     linkedin: 'https://www.linkedin.com/in/peter-mai-connolly/',
-  },
-  {
-    name: 'Sandra Al Hames',
-    role: 'E-Board Member',
-    photo: sandraAlHames,
-    linkedin: 'https://www.linkedin.com/in/sandra-al-hames/',
   },
   {
     name: null, role: 'E-Board Member', photo: null, linkedin: null,
