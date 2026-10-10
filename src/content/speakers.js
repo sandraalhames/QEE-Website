@@ -5,6 +5,8 @@
 //   photo  : import a headshot from src/assets/speakers/, or null for the placeholder
 //   kind   : 'keynote' | 'panelist' | 'workshop'
 // TODO: add headshots and the remaining bios as speakers send them.
+import aaronWirthwein from '../assets/speakers/aaron-wirthwein.jpg';
+
 const speakers = [
   {
     name: 'Sophy Shin',
@@ -17,7 +19,7 @@ const speakers = [
     name: 'Aaron Wirthwein',
     title: 'USC',
     kind: 'panelist',
-    photo: null,
+    photo: aaronWirthwein,
     bio: [],
   },
   {
@@ -33,6 +35,13 @@ const speakers = [
   },
   {
     name: 'Rosa Di Felice',
+    title: 'USC',
+    kind: 'panelist',
+    photo: null,
+    bio: [],
+  },
+  {
+    name: 'Bhaskar Krishnamachari',
     title: 'USC',
     kind: 'panelist',
     photo: null,
