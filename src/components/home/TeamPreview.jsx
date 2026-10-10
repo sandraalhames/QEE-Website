@@ -9,7 +9,7 @@ const TeamPreview = () => (
     <Container className={styles.inner}>
       <SectionHeading
         eyebrow="Who's behind it"
-        title="Meet the e-board"
+        title="Meet the E-board"
         subtitle="The USC students organizing Qompute in LA and running QEE's programming year-round."
         align="center"
       />
