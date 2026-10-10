@@ -2,13 +2,15 @@ import { screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { renderAt } from './utils';
 import speakers from '../content/speakers';
+import judges from '../content/judges';
 
 describe('speakers', () => {
   it('lists each speaker with their title on the Qompute 2026 landing page', async () => {
     renderAt('/events/qompute');
-    expect(await screen.findByRole('heading', { name: 'Speakers' })).toBeInTheDocument();
+    const heading = await screen.findByRole('heading', { name: 'Speakers' });
+    const section = heading.closest('section');
     speakers.forEach((s) => {
-      expect(screen.getByText(s.name)).toBeInTheDocument();
+      expect(within(section).getByText(s.name)).toBeInTheDocument();
     });
   });
 
@@ -29,5 +31,14 @@ describe('speakers', () => {
     await user.click(await screen.findByRole('button', { name: new RegExp(speakers[0].name) }));
     await user.click(screen.getByRole('button', { name: 'Close bio' }));
     expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
+  });
+
+  it('lists every judge below the speakers', async () => {
+    renderAt('/events/qompute');
+    const heading = await screen.findByRole('heading', { name: 'Judges' });
+    const section = heading.closest('section');
+    judges.forEach((j) => {
+      expect(within(section).getByText(j.name)).toBeInTheDocument();
+    });
   });
 });
