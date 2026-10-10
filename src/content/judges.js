@@ -4,6 +4,7 @@
 //   org   : organization
 //   photo : import a headshot from src/assets/judges/, or null for the placeholder
 // TODO: add headshots as judges send them.
+import catherinePotts from '../assets/speakers/catherine-potts.jpg';
 import sandraAlHames from '../assets/team/sandra-al-hames.jpg';
 
 const judges = [
@@ -11,7 +12,7 @@ const judges = [
     name: 'Vatsal Vatsyayan', role: 'Former Participant', org: 'USC', photo: null,
   },
   {
-    name: 'Catherine Potts', role: null, org: 'D-Wave', photo: null,
+    name: 'Catherine Potts', role: null, org: 'D-Wave', photo: catherinePotts,
   },
   {
     name: 'Sadman Ahmed Shanto', role: null, org: 'USC', photo: null,

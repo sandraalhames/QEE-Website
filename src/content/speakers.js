@@ -6,7 +6,10 @@
 //   kind   : 'keynote' | 'panelist' | 'workshop'
 // TODO: add headshots and the remaining bios as speakers send them.
 import aaronWirthwein from '../assets/speakers/aaron-wirthwein.jpg';
+import bhaskarKrishnamachari from '../assets/speakers/bhaskar-krishnamachari.jpg';
+import catherinePotts from '../assets/speakers/catherine-potts.jpg';
 import florentaTeodoridis from '../assets/speakers/florenta-teodoridis.jpg';
+import rosaDiFelice from '../assets/speakers/rosa-di-felice.jpg';
 
 const speakers = [
   {
@@ -38,14 +41,14 @@ const speakers = [
     name: 'Rosa Di Felice',
     title: 'USC',
     kind: 'panelist',
-    photo: null,
+    photo: rosaDiFelice,
     bio: [],
   },
   {
     name: 'Bhaskar Krishnamachari',
     title: 'USC',
     kind: 'panelist',
-    photo: null,
+    photo: bhaskarKrishnamachari,
     bio: [],
   },
   {
@@ -59,7 +62,7 @@ const speakers = [
     name: 'Catherine Potts',
     title: 'D-Wave',
     kind: 'panelist',
-    photo: null,
+    photo: catherinePotts,
     bio: [],
   },
   {
