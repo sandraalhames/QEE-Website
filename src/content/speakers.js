@@ -6,6 +6,7 @@
 //   kind   : 'keynote' | 'panelist' | 'workshop'
 // TODO: add headshots and the remaining bios as speakers send them.
 import aaronWirthwein from '../assets/speakers/aaron-wirthwein.jpg';
+import florentaTeodoridis from '../assets/speakers/florenta-teodoridis.jpg';
 
 const speakers = [
   {
@@ -26,7 +27,7 @@ const speakers = [
     name: 'Florenta Teodoridis',
     title: 'USC',
     kind: 'panelist',
-    photo: null,
+    photo: florentaTeodoridis,
     bio: [
       'Florenta Teodoridis is Associate Professor of Management and Organization and the Jorge Paulo and Susanna Lemann Chair in Entrepreneurship at the University of Southern California. Her main areas of interest are the economics of innovation and science, creativity and the impact of technology on society.',
       'She investigates factors that influence the rate and direction of technological advancements, such as research technologies, collaborations and breadth and depth of expertise, and the impact of technological advancements, such as artificial intelligence and quantum technologies, on business strategy and productivity. She is also a mentor for quantum technology startups at the Creative Destruction Lab, a leading entrepreneurship accelerator.',
