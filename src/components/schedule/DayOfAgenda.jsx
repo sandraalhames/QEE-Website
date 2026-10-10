@@ -16,8 +16,7 @@ const DayOfAgenda = () => {
         <span className={styles.date}>{event.finalEventDateLabel}</span>
       </h3>
       <p className={styles.note}>
-        Times and rooms land with the run-of-show. The blocks below are the
-        confirmed shape of the day.
+        All sessions are in TCC 450 at USC. Times are subject to small changes.
       </p>
 
       <div className={styles.filters} role="group" aria-label="Filter agenda by type">

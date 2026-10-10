@@ -1,23 +1,33 @@
-// Conference-day agenda skeleton, October 18, 2026.
-// TODO: fill real times/locations/titles when the run-of-show is locked.
-// Blocks below reflect the confirmed format (talks, workshops, panels,
-// merch); times stay null until scheduled so the page renders "time tba".
+// Conference-day agenda, October 18, 2026, TCC 450 at USC.
+// Times may still shift; organizer set-up (11:00 am - 1:00 pm) is
+// intentionally not listed publicly.
 // kind: 'talk' | 'workshop' | 'panel' | 'logistics'
+const LOCATION = 'TCC 450';
+
 const dayof = [
   {
-    time: null, title: 'Check-in opens', kind: 'logistics', location: null,
+    time: '1:00 - 1:30 pm', title: 'Check-in', kind: 'logistics', location: LOCATION,
   },
   {
-    time: null, title: 'Opening keynote', kind: 'talk', location: null,
+    time: '1:30 - 3:00 pm', title: 'Keynote Talk with IBM Quantum and HRL', kind: 'talk', location: LOCATION,
   },
   {
-    time: null, title: 'Workshop block', kind: 'workshop', location: null,
+    time: '3:00 - 3:10 pm', title: 'Networking, snacks, and group photo break', kind: 'logistics', location: LOCATION,
   },
   {
-    time: null, title: 'Panel: quantum ethics', kind: 'panel', location: null,
+    time: '3:10 - 4:30 pm', title: 'Wholistic View of Quantum Panel', kind: 'panel', location: LOCATION,
   },
   {
-    time: null, title: 'Closing talk and awards', kind: 'talk', location: null,
+    time: '4:30 - 5:30 pm', title: 'Networking and snack break', kind: 'logistics', location: LOCATION,
+  },
+  {
+    time: '4:30 - 5:30 pm', title: 'Quantum Workshop with qBraid', kind: 'workshop', location: LOCATION,
+  },
+  {
+    time: '5:30 - 6:00 pm', title: 'Announcing of Winners and Closing Remarks', kind: 'logistics', location: LOCATION,
+  },
+  {
+    time: '6:00 - 7:00 pm', title: 'Dinner', kind: 'logistics', location: LOCATION,
   },
 ];
 
