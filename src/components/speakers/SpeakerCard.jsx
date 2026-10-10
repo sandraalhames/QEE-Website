@@ -20,8 +20,9 @@ Photo.propTypes = {
 
 // Photo, name and title on the card; clicking opens a dialog with the full bio.
 const SpeakerCard = ({
-  name, title, bio, photo = null, kind,
+  name, title, bio, photo = null, kind = null, roleLabel = null, compact = false,
 }) => {
+  const label = roleLabel || (kind ? KIND_LABEL[kind] : null);
   const [open, setOpen] = useState(false);
   const closeRef = useRef(null);
   const triggerRef = useRef(null);
@@ -56,14 +57,14 @@ const SpeakerCard = ({
       <button
         type="button"
         ref={triggerRef}
-        className={styles.card}
+        className={`${styles.card} ${compact ? styles.compact : ''}`.trim()}
         onClick={() => setOpen(true)}
         aria-haspopup="dialog"
         aria-controls={dialogId}
       >
-        <Photo photo={photo} name={name} className={styles.photo} />
+        <Photo photo={photo} name={name} className={compact ? styles.photoSmall : styles.photo} />
         <span className={styles.name}>{name}</span>
-        <span className={styles.role}>{KIND_LABEL[kind]}</span>
+        {label && <span className={styles.role}>{label}</span>}
         <span className={styles.title}>{title}</span>
         <span className={styles.more}>{bio.length ? 'Read bio →' : 'Bio coming soon'}</span>
       </button>
@@ -95,7 +96,7 @@ const SpeakerCard = ({
               <Photo photo={photo} name={name} className={styles.dialogPhoto} />
               <div>
                 <h3 id={`${dialogId}-name`} className={styles.dialogName}>{name}</h3>
-                <p className={styles.dialogTitle}>{`${KIND_LABEL[kind]} · ${title}`}</p>
+                <p className={styles.dialogTitle}>{label ? `${label} · ${title}` : title}</p>
               </div>
             </div>
             <div className={styles.bio}>
@@ -113,7 +114,9 @@ SpeakerCard.propTypes = {
   title: PropTypes.string.isRequired,
   bio: PropTypes.arrayOf(PropTypes.string).isRequired,
   photo: PropTypes.string,
-  kind: PropTypes.oneOf(['keynote', 'panelist', 'workshop']).isRequired,
+  kind: PropTypes.oneOf(['keynote', 'panelist', 'workshop']),
+  roleLabel: PropTypes.string,
+  compact: PropTypes.bool,
 };
 
 export default SpeakerCard;

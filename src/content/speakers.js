@@ -17,7 +17,11 @@ const speakers = [
     title: 'IBM Quantum',
     kind: 'keynote',
     photo: null,
-    bio: [],
+    bio: [
+      'My unique career path has taken me from space engineering and computational physics to a Ph.D. in quantum algorithms, a journey I proudly navigated after a seven-year career break to raise my two sons as a home-stay mom. This diverse background gives me a rare ability to bridge different technical domains and rapidly master new technologies.',
+      'As a Quantum Strategist at IBM, I now channel this expertise into education and workforce development. I focus on creating impactful educational content and building educational strategies with North American universities to grow the quantum ecosystem.',
+      'A firm believer in the proverb, “it takes a village to raise a child,” I apply this philosophy to nurturing the next generation of computational scientists. My goal is to foster a vibrant and inclusive developer community, connecting cutting-edge technology with the people who will shape its future.',
+    ],
   },
   {
     name: 'Aaron Wirthwein',

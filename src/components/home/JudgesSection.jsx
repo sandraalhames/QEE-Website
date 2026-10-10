@@ -1,5 +1,6 @@
 import Container from '../ui/Container';
 import SectionHeading from '../ui/SectionHeading';
+import SpeakerCard from '../speakers/SpeakerCard';
 import judges from '../../content/judges';
 import useReveal from '../../hooks/useReveal';
 import styles from './JudgesSection.module.css';
@@ -12,26 +13,20 @@ const JudgesSection = () => {
     <section className={styles.section} ref={ref}>
       <Container>
         <SectionHeading eyebrow="judges" title="Judges" align="center" />
-        <ul className={styles.grid}>
+        <div className={styles.grid}>
           {judges.map((j) => (
-            <li key={j.name} className={styles.card}>
-              {j.photo ? (
-                <img src={j.photo} alt={j.name} className={styles.photo} />
-              ) : (
-                <div
-                  className={`${styles.photo} ${styles.avatar}`}
-                  role="img"
-                  aria-label={`${j.name} (photo coming soon)`}
-                >
-                  <span aria-hidden="true">|ψ⟩</span>
-                </div>
-              )}
-              <span className={styles.name}>{j.name}</span>
-              {j.role && <span className={styles.role}>{j.role}</span>}
-              <span className={styles.org}>{j.org}</span>
-            </li>
+            <div key={j.name} className={styles.cell}>
+              <SpeakerCard
+                compact
+                name={j.name}
+                roleLabel={j.role}
+                title={j.org}
+                bio={j.bio}
+                photo={j.photo}
+              />
+            </div>
           ))}
-        </ul>
+        </div>
       </Container>
     </section>
   );

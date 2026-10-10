@@ -29,6 +29,20 @@
   margin-bottom: var(--space-1);
 }
 
+.compact {
+  border-color: transparent;
+  background: transparent;
+  padding: var(--space-2);
+}
+
+.photoSmall {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: var(--space-1);
+}
+
 .avatar {
   display: flex;
   align-items: center;
