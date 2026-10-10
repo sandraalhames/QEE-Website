@@ -10,7 +10,7 @@ const Team = () => (
       <SectionHeading
         as="h1"
         eyebrow="team"
-        title="Meet the e-board"
+        title="Meet the E-board"
         subtitle="The USC students behind QEE and Qompute in LA."
       />
       <div className={styles.grid}>

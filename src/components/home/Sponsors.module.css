@@ -26,12 +26,9 @@
   max-width: 160px;
   width: auto;
   object-fit: contain;
-  filter: grayscale(1);
-  opacity: 0.75;
-  transition: opacity 0.2s ease, filter 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
-.logoLink:hover img {
-  filter: none;
-  opacity: 1;
+a.logoLink:hover img {
+  transform: scale(1.05);
 }
