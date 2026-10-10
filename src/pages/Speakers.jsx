@@ -1,7 +1,7 @@
 import Container from '../components/ui/Container';
 import SectionHeading from '../components/ui/SectionHeading';
 import Button from '../components/ui/Button';
-import SpeakerCard from '../components/speakers/SpeakerCard';
+import SpeakerGrid from '../components/speakers/SpeakerGrid';
 import speakers from '../content/speakers';
 import styles from './Speakers.module.css';
 
@@ -12,7 +12,7 @@ const Speakers = () => (
         as="h1"
         eyebrow="speakers"
         title="Talks and panels"
-        subtitle="The people bringing quantum computing and its ethics questions to the conference day."
+        subtitle="The people bringing quantum computing and its ethics questions to the conference day. Click a speaker to read their bio."
       />
       {speakers.length === 0 ? (
         <div className={styles.empty}>
@@ -25,19 +25,7 @@ const Speakers = () => (
           </Button>
         </div>
       ) : (
-        <div className={styles.grid}>
-          {speakers.map((speaker) => (
-            <SpeakerCard
-              key={speaker.name}
-              name={speaker.name}
-              credential={speaker.credential}
-              title={speaker.title}
-              bio={speaker.bio}
-              photo={speaker.photo}
-              kind={speaker.kind}
-            />
-          ))}
-        </div>
+        <SpeakerGrid />
       )}
     </Container>
   </section>

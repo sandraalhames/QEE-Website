@@ -1,24 +1,32 @@
 .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.4rem;
+  width: 100%;
   background: #fff;
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   padding: var(--space-3);
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
-.top {
-  display: flex;
-  gap: var(--space-2);
-  align-items: center;
-  margin-bottom: var(--space-2);
+.card:hover,
+.card:focus-visible {
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+  transform: translateY(-2px);
 }
 
-.photo,
-.avatar {
-  width: 7.2rem;
-  height: 7.2rem;
+.photo {
+  width: 16rem;
+  height: 16rem;
   border-radius: 50%;
-  flex: none;
   object-fit: cover;
+  margin-bottom: var(--space-1);
 }
 
 .avatar {
@@ -32,7 +40,7 @@
 
 .avatar span {
   font-family: var(--font-mono);
-  font-size: 1.9rem;
+  font-size: 2.6rem;
   color: var(--color-sky-blue);
   opacity: 0.75;
 }
@@ -41,7 +49,6 @@
   font-family: var(--font-mono);
   font-size: 1.15rem;
   color: var(--color-teal-text);
-  margin: 0 0 0.2rem;
 }
 
 .bracket {
@@ -49,23 +56,99 @@
 }
 
 .name {
-  font-size: 1.8rem;
-  margin-bottom: 0.2rem;
-}
-
-.credential {
-  font-weight: 400;
-  color: var(--color-ink-soft);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.9rem;
+  color: var(--color-navy);
 }
 
 .title {
-  font-size: 1.35rem;
+  font-size: 1.4rem;
   color: var(--color-ink-soft);
+  line-height: 1.5;
+}
+
+.more {
+  margin-top: var(--space-1);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-teal-text);
+}
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(10, 20, 45, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3);
+}
+
+.dialog {
+  position: relative;
+  background: #fff;
+  border-radius: var(--radius);
+  max-width: 64rem;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: var(--space-4);
+  box-shadow: 0 20px 60px rgba(10, 20, 45, 0.3);
+}
+
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+  background: none;
+  border: 0;
+  font-size: 2.8rem;
+  line-height: 1;
+  color: var(--color-ink-soft);
+  cursor: pointer;
+}
+
+.dialogHead {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+  margin-bottom: var(--space-3);
+}
+
+.dialogPhoto {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  object-fit: cover;
+  flex: none;
+}
+
+.dialogName {
+  font-size: 2.2rem;
+  margin: 0.2rem 0;
+}
+
+.dialogTitle {
   margin: 0;
+  color: var(--color-ink-soft);
+  font-size: 1.45rem;
 }
 
 .bio {
   color: var(--color-ink-soft);
-  font-size: 1.45rem;
-  margin: 0;
+  font-size: 1.55rem;
+  line-height: 1.7;
+}
+
+.bio p + p {
+  margin-top: var(--space-2);
+}
+
+@media (max-width: 560px) {
+  .dialogHead {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
