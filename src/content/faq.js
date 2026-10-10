@@ -22,7 +22,7 @@ const faq = [
   },
   {
     q: 'How do I sign up?',
-    a: 'Registration opens soon via Google Form. The Register page will have the link, and we\'ll announce it on Instagram (@qee_usc).',
+    a: 'Registration is open. The Register page has the Google Form link, and we post updates on Instagram (@qee_usc).',
   },
 ];
 
