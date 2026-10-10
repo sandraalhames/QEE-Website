@@ -5,26 +5,36 @@
 //   photo  : import a headshot from src/assets/speakers/, or null for the placeholder
 //   kind   : 'keynote' | 'panelist' | 'workshop'
 // TODO: add headshots and the remaining bios as speakers send them.
+import aaronWirthwein from '../assets/speakers/aaron-wirthwein.jpg';
+import bhaskarKrishnamachari from '../assets/speakers/bhaskar-krishnamachari.jpg';
+import catherinePotts from '../assets/speakers/catherine-potts.jpg';
+import florentaTeodoridis from '../assets/speakers/florenta-teodoridis.jpg';
+import rosaDiFelice from '../assets/speakers/rosa-di-felice.jpg';
+
 const speakers = [
   {
     name: 'Sophy Shin',
     title: 'IBM Quantum',
     kind: 'keynote',
     photo: null,
-    bio: [],
+    bio: [
+      'My unique career path has taken me from space engineering and computational physics to a Ph.D. in quantum algorithms, a journey I proudly navigated after a seven-year career break to raise my two sons as a home-stay mom. This diverse background gives me a rare ability to bridge different technical domains and rapidly master new technologies.',
+      'As a Quantum Strategist at IBM, I now channel this expertise into education and workforce development. I focus on creating impactful educational content and building educational strategies with North American universities to grow the quantum ecosystem.',
+      'A firm believer in the proverb, “it takes a village to raise a child,” I apply this philosophy to nurturing the next generation of computational scientists. My goal is to foster a vibrant and inclusive developer community, connecting cutting-edge technology with the people who will shape its future.',
+    ],
   },
   {
     name: 'Aaron Wirthwein',
     title: 'USC',
     kind: 'panelist',
-    photo: null,
+    photo: aaronWirthwein,
     bio: [],
   },
   {
     name: 'Florenta Teodoridis',
     title: 'USC',
     kind: 'panelist',
-    photo: null,
+    photo: florentaTeodoridis,
     bio: [
       'Florenta Teodoridis is Associate Professor of Management and Organization and the Jorge Paulo and Susanna Lemann Chair in Entrepreneurship at the University of Southern California. Her main areas of interest are the economics of innovation and science, creativity and the impact of technology on society.',
       'She investigates factors that influence the rate and direction of technological advancements, such as research technologies, collaborations and breadth and depth of expertise, and the impact of technological advancements, such as artificial intelligence and quantum technologies, on business strategy and productivity. She is also a mentor for quantum technology startups at the Creative Destruction Lab, a leading entrepreneurship accelerator.',
@@ -35,7 +45,14 @@ const speakers = [
     name: 'Rosa Di Felice',
     title: 'USC',
     kind: 'panelist',
-    photo: null,
+    photo: rosaDiFelice,
+    bio: [],
+  },
+  {
+    name: 'Bhaskar Krishnamachari',
+    title: 'USC',
+    kind: 'panelist',
+    photo: bhaskarKrishnamachari,
     bio: [],
   },
   {
@@ -49,7 +66,7 @@ const speakers = [
     name: 'Catherine Potts',
     title: 'D-Wave',
     kind: 'panelist',
-    photo: null,
+    photo: catherinePotts,
     bio: [],
   },
   {

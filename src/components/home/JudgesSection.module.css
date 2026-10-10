@@ -3,9 +3,6 @@
 }
 
 .grid {
-  list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -14,54 +11,7 @@
   margin: 0 auto;
 }
 
-.card {
-  flex: 0 1 200px;
+.cell {
+  flex: 0 1 220px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 0.3rem;
-}
-
-.photo {
-  width: 12rem;
-  height: 12rem;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: var(--space-1);
-}
-
-.avatar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background:
-    radial-gradient(circle at 30% 25%, rgba(94, 193, 229, 0.25), transparent 55%),
-    linear-gradient(160deg, var(--color-sky-pale) 0%, var(--color-sky-light) 100%);
-}
-
-.avatar span {
-  font-family: var(--font-mono);
-  font-size: 2.2rem;
-  color: var(--color-sky-blue);
-  opacity: 0.75;
-}
-
-.name {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 1.7rem;
-  color: var(--color-navy);
-}
-
-.role {
-  font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 1.35rem;
-  color: var(--color-teal-text);
-}
-
-.org {
-  font-size: 1.4rem;
-  color: var(--color-ink-soft);
 }
