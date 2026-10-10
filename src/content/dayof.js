@@ -9,22 +9,22 @@ const dayof = [
     time: '1:00 - 1:30 pm', title: 'Check-in', kind: 'logistics', location: LOCATION,
   },
   {
-    time: '1:30 - 3:00 pm', title: 'Keynote', kind: 'talk', location: LOCATION,
+    time: '1:30 - 3:00 pm', title: 'Keynote Talk with IBM Quantum and HRL', kind: 'talk', location: LOCATION,
   },
   {
     time: '3:00 - 3:10 pm', title: 'Networking, snacks, and group photo break', kind: 'logistics', location: LOCATION,
   },
   {
-    time: '3:10 - 4:30 pm', title: 'Panel', kind: 'panel', location: LOCATION,
+    time: '3:10 - 4:30 pm', title: 'Wholistic View of Quantum Panel', kind: 'panel', location: LOCATION,
   },
   {
     time: '4:30 - 5:30 pm', title: 'Networking and snack break', kind: 'logistics', location: LOCATION,
   },
   {
-    time: '4:30 - 5:30 pm', title: 'Workshop / Q&A', kind: 'workshop', location: LOCATION,
+    time: '4:30 - 5:30 pm', title: 'Quantum Workshop with qBraid', kind: 'workshop', location: LOCATION,
   },
   {
-    time: '5:30 - 6:00 pm', title: 'Winners announcement and break', kind: 'logistics', location: LOCATION,
+    time: '5:30 - 6:00 pm', title: 'Announcing of Winners and Closing Remarks', kind: 'logistics', location: LOCATION,
   },
   {
     time: '6:00 - 7:00 pm', title: 'Dinner', kind: 'logistics', location: LOCATION,
