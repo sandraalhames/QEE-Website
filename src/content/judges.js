@@ -6,6 +6,7 @@
 //   photo : import a headshot from src/assets/judges/, or null for the placeholder
 // TODO: add headshots as judges send them.
 import catherinePotts from '../assets/speakers/catherine-potts.jpg';
+import sadmanAhmedShanto from '../assets/judges/sadman-ahmed-shanto.jpg';
 import sandraAlHames from '../assets/team/sandra-al-hames.jpg';
 
 import speakers from './speakers';
@@ -23,7 +24,7 @@ const judges = [
     name: 'Sadman Ahmed Shanto',
     role: null,
     org: 'USC',
-    photo: null,
+    photo: sadmanAhmedShanto,
     bio: [
       'Sadman Ahmed Shanto is a physics PhD candidate at the Levenson-Falk Lab at USC working on superconducting quantum hardware.',
     ],
