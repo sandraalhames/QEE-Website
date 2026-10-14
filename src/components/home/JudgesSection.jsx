@@ -1,6 +1,6 @@
 import Container from '../ui/Container';
 import SectionHeading from '../ui/SectionHeading';
-import SpeakerCard from '../speakers/SpeakerCard';
+import JudgeGrid from '../speakers/JudgeGrid';
 import judges from '../../content/judges';
 import useReveal from '../../hooks/useReveal';
 import styles from './JudgesSection.module.css';
@@ -12,21 +12,13 @@ const JudgesSection = () => {
   return (
     <section className={styles.section} ref={ref}>
       <Container>
-        <SectionHeading eyebrow="judges" title="Judges" align="center" />
-        <div className={styles.grid}>
-          {judges.map((j) => (
-            <div key={j.name} className={styles.cell}>
-              <SpeakerCard
-                compact
-                name={j.name}
-                roleLabel={j.role}
-                title={j.org}
-                bio={j.bio}
-                photo={j.photo}
-              />
-            </div>
-          ))}
-        </div>
+        <SectionHeading
+          eyebrow="judges"
+          title="Judges"
+          subtitle="Click a judge to read their bio."
+          align="center"
+        />
+        <JudgeGrid />
       </Container>
     </section>
   );

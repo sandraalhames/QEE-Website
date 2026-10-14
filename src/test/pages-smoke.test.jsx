@@ -14,6 +14,7 @@ const ROUTES = [
   { path: '/events/qompute', heading: /qompute in la/i },
   { path: '/events/qompute/schedule', heading: /how the event flows/i },
   { path: '/events/qompute/speakers', heading: /talks and panels/i },
+  { path: '/events/qompute/judges', heading: /meet the judges/i },
   { path: '/events/qompute/faq', heading: /frequently asked questions/i },
   { path: '/events/qompute/resources', heading: /learn quantum before you compete/i },
   { path: '/events/qompute/register', heading: /sign up for qompute in la/i },

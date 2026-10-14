@@ -3,24 +3,48 @@
 //   title  : organization, shown under the role on the card
 //   bio    : list of paragraphs shown when the card is opened; [] shows "Bio coming soon"
 //   photo  : import a headshot from src/assets/speakers/, or null for the placeholder
-//   kind   : 'keynote' | 'panelist' | 'workshop'
+//   kind   : 'keynote' | 'speaker' | 'panelist' | 'workshop'
+// Affiliations follow IBM's guidance for public pages: 'IBM Research' for IBM
+// speakers, 'HRL Laboratories, LLC' for HRL speakers.
 // TODO: add headshots and the remaining bios as speakers send them.
 import aaronWirthwein from '../assets/speakers/aaron-wirthwein.jpg';
 import bhaskarKrishnamachari from '../assets/speakers/bhaskar-krishnamachari.jpg';
 import catherinePotts from '../assets/speakers/catherine-potts.jpg';
 import florentaTeodoridis from '../assets/speakers/florenta-teodoridis.jpg';
 import rosaDiFelice from '../assets/speakers/rosa-di-felice.jpg';
+import serenaGodwin from '../assets/speakers/serena-godwin.jpg';
+import thaddeusLadd from '../assets/speakers/thaddeus-ladd.jpg';
 
 const speakers = [
   {
     name: 'Sophy Shin',
-    title: 'IBM Quantum',
+    title: 'IBM Research',
     kind: 'keynote',
     photo: null,
     bio: [
       'My unique career path has taken me from space engineering and computational physics to a Ph.D. in quantum algorithms, a journey I proudly navigated after a seven-year career break to raise my two sons as a home-stay mom. This diverse background gives me a rare ability to bridge different technical domains and rapidly master new technologies.',
       'As a Quantum Strategist at IBM, I now channel this expertise into education and workforce development. I focus on creating impactful educational content and building educational strategies with North American universities to grow the quantum ecosystem.',
       'A firm believer in the proverb, “it takes a village to raise a child,” I apply this philosophy to nurturing the next generation of computational scientists. My goal is to foster a vibrant and inclusive developer community, connecting cutting-edge technology with the people who will shape its future.',
+    ],
+  },
+  {
+    name: 'Thaddeus Ladd',
+    title: 'HRL Laboratories, LLC',
+    kind: 'keynote',
+    photo: thaddeusLadd,
+    bio: [
+      'Thaddeus D. Ladd, Ph.D. is a distinguished quantum information scientist serving as Chief Scientist of the Qubit Systems Laboratory at HRL Laboratories in Malibu, California. He earned his B.S. in physics from Harvey Mudd College in 1998 before pursuing his graduate studies at Stanford University, where he obtained both an M.S. and a Ph.D. in Applied Physics in 2005. Prior to joining HRL Laboratories in late 2009, he performed project research at Stanford\'s Edward L. Ginzton Laboratory while holding appointments with the University of Tokyo and Japan’s National Institute of Informatics.',
+      'Thaddeus\'s research typically provides the computational and management “glue” connecting quantum theory and cryogenic experiment, enabling pioneering advances in silicon spin qubits, integrated quantum optics, and practical architectures for scalable, fault-tolerant quantum error correction. Thaddeus is a Fellow of the Fannie and John Hertz Foundation and a Fellow of the American Physical Society. His technical leadership and high-impact contributions at HRL have also been recognized with multiple HRL-internal honors, including HRL\'s prestigious Chairman’s Award.',
+    ],
+  },
+  {
+    name: 'Serena Godwin',
+    title: 'IBM Research',
+    kind: 'speaker',
+    photo: serenaGodwin,
+    bio: [
+      'Serena Godwin is a Quantum Event Manager at IBM Quantum, where she leads large-scale community and educational initiatives within the quantum computing ecosystem. Based in Los Angeles, California, Serena began her IBM journey as an intern in 2022 before joining full-time now within the Experience and Marketing team.',
+      'Since then she has led and built out the Qiskit Fall Fest, IBM Quantum’s largest annual community program, helping it reach more than 32,000 participants globally in the past year. Her work focuses on fostering engagement, expanding access to quantum education, and building the worldwide quantum community.',
     ],
   },
   {

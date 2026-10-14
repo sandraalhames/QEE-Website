@@ -2,7 +2,9 @@ import { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import styles from './SpeakerCard.module.css';
 
-const KIND_LABEL = { keynote: 'Keynote Speaker', panelist: 'Panelist', workshop: 'Workshop Host' };
+const KIND_LABEL = {
+  keynote: 'Keynote Speaker', speaker: 'Speaker', panelist: 'Panelist', workshop: 'Workshop Host',
+};
 
 const Photo = ({ photo = null, name, className }) => (photo ? (
   <img src={photo} alt={name} className={className} />
@@ -114,7 +116,7 @@ SpeakerCard.propTypes = {
   title: PropTypes.string.isRequired,
   bio: PropTypes.arrayOf(PropTypes.string).isRequired,
   photo: PropTypes.string,
-  kind: PropTypes.oneOf(['keynote', 'panelist', 'workshop']),
+  kind: PropTypes.oneOf(['keynote', 'speaker', 'panelist', 'workshop']),
   roleLabel: PropTypes.string,
   compact: PropTypes.bool,
 };

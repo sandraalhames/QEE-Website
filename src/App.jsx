@@ -10,6 +10,7 @@ const QomputeLayout = lazy(() => import('./pages/events/QomputeLayout'));
 const QomputeLanding = lazy(() => import('./pages/events/QomputeLanding'));
 const Schedule = lazy(() => import('./pages/Schedule'));
 const Speakers = lazy(() => import('./pages/Speakers'));
+const Judges = lazy(() => import('./pages/Judges'));
 const Faq = lazy(() => import('./pages/Faq'));
 const Registration = lazy(() => import('./pages/Registration'));
 const Resources = lazy(() => import('./pages/Resources'));
@@ -42,6 +43,7 @@ export const AppRoutes = () => (
           <Route index element={withSuspense(<QomputeLanding />)} />
           <Route path="schedule" element={withSuspense(<Schedule />)} />
           <Route path="speakers" element={withSuspense(<Speakers />)} />
+          <Route path="judges" element={withSuspense(<Judges />)} />
           <Route path="faq" element={withSuspense(<Faq />)} />
           <Route path="resources" element={withSuspense(<Resources />)} />
           <Route path="register" element={withSuspense(<Registration />)} />
