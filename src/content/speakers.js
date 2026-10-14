@@ -52,7 +52,10 @@ const speakers = [
     title: 'USC',
     kind: 'panelist',
     photo: aaronWirthwein,
-    bio: [],
+    bio: [
+      'Professor Aaron Wirthwein teaches physics and astronomy at the University of Southern California, where his courses range from introductory physics and astronomy to upper-division mechanics, electromagnetism, and quantum mechanics. His background is in computational physics, with a focus on Bose-Einstein condensation.',
+      'His teaching emphasizes how physical ideas are constructed, including the assumptions and principles behind a model and the evidence that supports it. He presents science as an ongoing effort to build, test, and refine explanations of the natural world.',
+    ],
   },
   {
     name: 'Florenta Teodoridis',
