@@ -14,7 +14,7 @@ const bioOf = (name) => speakers.find((s) => s.name === name)?.bio || [];
 
 const judges = [
   {
-    name: 'Vatsal Vatsyayan', role: 'Former Participant', org: 'USC', photo: null, bio: [],
+    name: 'Vatsal Vatsyayan', role: null, org: 'Former Qompute participant, USC', photo: null, bio: [],
   },
   {
     name: 'Catherine Potts', role: null, org: 'D-Wave', photo: catherinePotts, bio: bioOf('Catherine Potts'),
