@@ -27,6 +27,10 @@ const ROUTES = {
     title: 'Speakers | Qompute in LA',
     description: "Meet the speakers and panelists for Qompute in LA, the USC Quantum Engineering Ethics conference day on October 18, 2026.",
   },
+  'events/qompute/judges': {
+    title: 'Judges | Qompute in LA',
+    description: "Meet the judges reviewing projects for Qompute in LA, the USC Quantum Engineering Ethics hackathon and conference day on October 18, 2026.",
+  },
   'events/qompute/faq': {
     title: 'FAQ | Qompute in LA',
     description: "Answers to common questions about Qompute in LA, the USC Quantum Engineering Ethics hackathon and conference day on October 18, 2026.",

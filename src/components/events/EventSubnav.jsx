@@ -6,6 +6,7 @@ const LINKS = [
   { to: '/events/qompute', label: 'Overview', end: true },
   { to: '/events/qompute/schedule', label: 'Schedule' },
   { to: '/events/qompute/speakers', label: 'Speakers' },
+  { to: '/events/qompute/judges', label: 'Judges' },
   { to: '/events/qompute/faq', label: 'FAQ' },
   { to: '/events/qompute/resources', label: 'Resources' },
   { to: '/events/qompute/register', label: 'Register' },

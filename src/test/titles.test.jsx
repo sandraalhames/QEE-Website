@@ -16,6 +16,7 @@ describe('per-route document.title', () => {
     ['/events/qompute', 'Qompute in LA | QEE'],
     ['/events/qompute/schedule', 'Schedule | Qompute in LA'],
     ['/events/qompute/speakers', 'Speakers | Qompute in LA'],
+    ['/events/qompute/judges', 'Judges | Qompute in LA'],
     ['/events/qompute/faq', 'FAQ | Qompute in LA'],
     ['/events/qompute/resources', 'Resources | Qompute in LA'],
     ['/events/qompute/register', 'Register | Qompute in LA'],

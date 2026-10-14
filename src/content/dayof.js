@@ -9,7 +9,7 @@ const dayof = [
     time: '1:00 - 1:30 pm', title: 'Check-in', kind: 'logistics', location: LOCATION,
   },
   {
-    time: '1:30 - 3:00 pm', title: 'Keynote Talk with IBM Quantum and HRL', kind: 'talk', location: LOCATION,
+    time: '1:30 - 3:00 pm', title: 'Keynote: Building the Future of Quantum Computing, from Quantum Software to Quantum Hardware (IBM Quantum and HRL)', kind: 'talk', location: LOCATION,
   },
   {
     time: '3:00 - 3:10 pm', title: 'Networking, snacks, and group photo break', kind: 'logistics', location: LOCATION,

@@ -3,6 +3,7 @@ import userEvent from '@testing-library/user-event';
 import { renderAt } from './utils';
 import speakers from '../content/speakers';
 import judges from '../content/judges';
+import keynote from '../content/keynote';
 
 describe('speakers', () => {
   it('lists each speaker with their title on the Qompute 2026 landing page', async () => {
@@ -40,5 +41,18 @@ describe('speakers', () => {
     judges.forEach((j) => {
       expect(within(section).getByText(j.name)).toBeInTheDocument();
     });
+  });
+
+  it('shows the keynote title and every judge on the Judges tab', async () => {
+    renderAt('/events/qompute/judges');
+    await screen.findByRole('heading', { name: /meet the judges/i });
+    judges.forEach((j) => {
+      expect(screen.getByText(j.name)).toBeInTheDocument();
+    });
+  });
+
+  it('shows the keynote on the Qompute 2026 landing page', async () => {
+    renderAt('/events/qompute');
+    expect(await screen.findByRole('heading', { name: keynote.title })).toBeInTheDocument();
   });
 });
