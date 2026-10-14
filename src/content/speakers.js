@@ -20,6 +20,7 @@ const speakers = [
     name: 'Sophy Shin',
     title: 'IBM Research',
     kind: 'keynote',
+    roleLabel: 'Keynote Speaker & Panelist',
     photo: null,
     bio: [
       'My unique career path has taken me from space engineering and computational physics to a Ph.D. in quantum algorithms, a journey I proudly navigated after a seven-year career break to raise my two sons as a home-stay mom. This diverse background gives me a rare ability to bridge different technical domains and rapidly master new technologies.',
@@ -40,7 +41,7 @@ const speakers = [
   {
     name: 'Serena Godwin',
     title: 'IBM Research',
-    kind: 'speaker',
+    kind: 'keynote',
     photo: serenaGodwin,
     bio: [
       'Serena Godwin is a Quantum Event Manager at IBM Quantum, where she leads large-scale community and educational initiatives within the quantum computing ecosystem. Based in Los Angeles, California, Serena began her IBM journey as an intern in 2022 before joining full-time now within the Experience and Marketing team.',
@@ -49,7 +50,7 @@ const speakers = [
   },
   {
     name: 'Aaron Wirthwein',
-    title: 'USC',
+    title: 'Assistant Professor (Teaching), Department of Physics and Astronomy, USC',
     kind: 'panelist',
     photo: aaronWirthwein,
     bio: [
@@ -73,7 +74,10 @@ const speakers = [
     title: 'USC',
     kind: 'panelist',
     photo: rosaDiFelice,
-    bio: [],
+    bio: [
+      'Rosa Di Felice is a Professor of Physics and Astronomy and of Quantitative and Computational Biology at the University of Southern California, and a Research Director at the CNR-NANO Institute in Modena, Italy. She earned her Ph.D. in Physics from the University of Rome "Tor Vergata" and was a DARPA postdoctoral researcher at Xerox PARC.',
+      'Her research in theoretical and computational biophysics examines the electronic and structural properties of DNA and proteins, charge transport in biological systems, and hybrid bio-nano materials. She is also exploring how quantum computation can be applied to problems in nanoscience, chemistry, materials science, physics, and biology.',
+    ],
   },
   {
     name: 'Bhaskar Krishnamachari',

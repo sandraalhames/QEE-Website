@@ -12,6 +12,7 @@ const SpeakerGrid = () => (
         bio={s.bio}
         photo={s.photo}
         kind={s.kind}
+        roleLabel={s.roleLabel}
       />
     ))}
   </div>
