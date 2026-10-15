@@ -8,6 +8,7 @@
 import catherinePotts from '../assets/speakers/catherine-potts.jpg';
 import sophyShin from '../assets/speakers/sophy-shin.jpg';
 import jeanieQi from '../assets/judges/jeanie-qi.jpg';
+import vatsalVatsyayan from '../assets/judges/vatsal-vatsyayan.jpg';
 import sadmanAhmedShanto from '../assets/judges/sadman-ahmed-shanto.jpg';
 
 import speakers from './speakers';
@@ -16,7 +17,13 @@ const bioOf = (name) => speakers.find((s) => s.name === name)?.bio || [];
 
 const judges = [
   {
-    name: 'Vatsal Vatsyayan', role: null, org: 'Former Qompute participant, USC', photo: null, bio: [],
+    name: 'Vatsal Vatsyayan',
+    role: null,
+    org: 'Former Qompute participant, USC',
+    photo: vatsalVatsyayan,
+    bio: [
+      'Vatsal Vatsyayan graduated from the USC Viterbi School of Engineering with an M.S. in Computer Science in May 2026. He then joined The 880, a stealth startup, as Director of Technology and Head of App Development, where he oversees all of the company\'s digital initiatives. Vatsal is also building his own early-stage startup.',
+    ],
   },
   {
     name: 'Catherine Potts', role: null, org: 'D-Wave', photo: catherinePotts, bio: bioOf('Catherine Potts'),
