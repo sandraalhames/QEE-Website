@@ -9,3 +9,10 @@
 .timeline li { padding: 0 0 var(--space-3) var(--space-3); font-size: 1.6rem; color: var(--color-ink-soft); }
 .timeline time { display: block; font-weight: 600; color: var(--color-ink); }
 .list { columns: 2 260px; font-size: 1.6rem; color: var(--color-ink-soft); padding-left: 2rem; }
+.overview { display: grid; gap: var(--space-2); font-size: 1.6rem; margin-top: var(--space-3); max-width: 80ch; }
+.overview div { display: grid; grid-template-columns: 11rem 1fr; gap: var(--space-2); }
+.overview dt { font-weight: 600; color: var(--color-navy); }
+.overview dd { margin: 0; color: var(--color-ink-soft); }
+.card strong.small { font-size: 1.8rem; }
+.note { margin-top: var(--space-3); font-size: 1.5rem; color: var(--color-ink-soft); max-width: 80ch; }
+@media (max-width: 600px) { .overview div { grid-template-columns: 1fr; gap: 0; } }

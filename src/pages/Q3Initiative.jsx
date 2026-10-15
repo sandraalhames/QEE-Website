@@ -13,41 +13,56 @@ const Q3Initiative = () => (
           as="h1"
           eyebrow="initiative"
           title="Q³ Initiative"
-          subtitle="A year-long quantum education initiative uniting science, ethics and art."
+          subtitle="A year-long quantum education initiative uniting science, ethics, and art."
         />
-        <div className={styles.body}>
-          <p>{q3.intro[0]}</p>
-          <p className={own.equation}>Q³ = ⟨ Science | Ethics | Art ⟩</p>
-          <p>{q3.intro[1]}</p>
-        </div>
+        <p className={own.equation}>Q³ = ⟨ Science | Ethics | Art ⟩</p>
+
+        <dl className={own.overview}>
+          {q3.overview.map((o) => (
+            <div key={o.label}><dt>{o.label}</dt><dd>{o.text}</dd></div>
+          ))}
+        </dl>
 
         <div className={own.block}>
-          <h2>Two flagship events</h2>
           <div className={own.cards}>
             {q3.pillars.map((p) => (
               <div key={p.name} className={own.card}>
                 <strong>{p.name}</strong>
-                <span>{`${p.where} · ${p.focus}`}</span>
+                <span>{p.focus}</span>
               </div>
             ))}
           </div>
         </div>
 
         <div className={own.block}>
-          <h2>A year of quantum</h2>
+          <h2>About the initiative</h2>
+          <div className={styles.body}>
+            {q3.detail.map((p) => <p key={p}>{p}</p>)}
+          </div>
+        </div>
+
+        <div className={own.block}>
+          <h2>How is Q³ year-long?</h2>
           <ol className={own.timeline}>
-            {q3.year.map((y) => (
-              <li key={y.when}><time>{y.when}</time>{y.what}</li>
-            ))}
+            {q3.year.map((y) => <li key={y.when}><time>{y.when}</time>{y.what}</li>)}
           </ol>
         </div>
 
         <div className={own.block}>
-          <h2>Qompute 2025</h2>
-          <div className={styles.body}>
-            {q3.qompute.map((p) => <p key={p}>{p}</p>)}
+          <h2>Qompute 2025 event timeline</h2>
+          <div className={own.cards}>
+            {q3.timeline.map((t) => (
+              <div key={t.title} className={own.card}>
+                <strong className={own.small}>{t.title}</strong>
+                <span>{t.when}</span>
+              </div>
+            ))}
           </div>
-          <div className={own.cards} style={{ marginTop: 'var(--space-3)' }}>
+        </div>
+
+        <div className={own.block}>
+          <h2>Initiative scale</h2>
+          <div className={own.cards}>
             {q3.stats.map((s) => (
               <div key={s.label} className={own.card}>
                 <strong>{s.value}</strong>
@@ -55,16 +70,12 @@ const Q3Initiative = () => (
               </div>
             ))}
           </div>
+          <p className={own.note}>{`Countries reached include ${q3.countries.join(', ')}.`}</p>
         </div>
 
         <div className={own.block}>
-          <h2>2025 speakers</h2>
+          <h2>Qompute 2025 speakers</h2>
           <ul className={own.list}>{q3.speakers2025.map((n) => <li key={n}>{n}</li>)}</ul>
-        </div>
-
-        <div className={own.block}>
-          <h2>2025 partners</h2>
-          <ul className={own.list}>{q3.partners2025.map((n) => <li key={n}>{n}</li>)}</ul>
         </div>
       </Container>
     </section>
