@@ -84,7 +84,10 @@ const speakers = [
     title: 'USC',
     kind: 'panelist',
     photo: bhaskarKrishnamachari,
-    bio: [],
+    bio: [
+      'Bhaskar Krishnamachari is a Professor of Electrical and Computer Engineering, with a joint appointment in Computer Science, at the USC Viterbi School of Engineering, where he holds the Ming Hsieh Faculty Fellowship. He co-directs the Ming Hsieh Institute and directs the Autonomous Networks Research Group. He earned his B.E. from The Cooper Union and his M.S. and Ph.D. in Electrical Engineering from Cornell University, and has been on the USC faculty since 2002.',
+      'His research spans next-generation wireless networks, the Internet of Things, distributed systems, blockchain, and artificial intelligence, from theoretical algorithm design to working prototypes. He has co-authored more than 300 technical articles and the textbook Networking Wireless Sensors. An IEEE Fellow, he has also been named to MIT Technology Review\'s TR-35 and Popular Science\'s "Brilliant 10."',
+    ],
   },
   {
     name: 'Catherine Potts',
