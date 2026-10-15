@@ -80,13 +80,6 @@ const speakers = [
     bio: [],
   },
   {
-    name: 'Siclali Loya',
-    title: 'Deloitte',
-    kind: 'panelist',
-    photo: null,
-    bio: [],
-  },
-  {
     name: 'Catherine Potts',
     title: 'D-Wave',
     kind: 'panelist',
