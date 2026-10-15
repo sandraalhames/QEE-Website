@@ -74,6 +74,19 @@ const Q3Initiative = () => (
         </div>
 
         <div className={own.block}>
+          <h2>What participants gained</h2>
+          <p className={own.note}>Self-reported increase in knowledge, from the post-event feedback survey.</p>
+          <div className={own.cards} style={{ marginTop: 'var(--space-3)' }}>
+            {q3.growth.map((g) => (
+              <div key={g.label} className={own.card}>
+                <strong>{`+${g.value}`}</strong>
+                <span>{g.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className={own.block}>
           <h2>Qompute 2025 speakers</h2>
           <ul className={own.list}>{q3.speakers2025.map((n) => <li key={n}>{n}</li>)}</ul>
         </div>

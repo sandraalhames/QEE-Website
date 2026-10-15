@@ -34,10 +34,17 @@ const q3 = {
     { title: 'Qompute 2025 Conference', when: 'Sunday, 9/14 · 11:00 AM – 7:00 PM' },
   ],
   stats: [
-    { value: '83', label: 'registered' },
-    { value: '75', label: 'in-person attendees' },
+    { value: '140', label: 'students registered for Qompute at USC' },
+    { value: '83', label: 'from Los Angeles signed up to attend in person' },
+    { value: '75', label: 'attended in person' },
     { value: '15', label: 'countries reached' },
     { value: '100%', label: 'of survey respondents would attend another year of Qompute' },
+  ],
+  growth: [
+    { value: '46%', label: 'Quantum algorithms' },
+    { value: '71%', label: 'Ethics' },
+    { value: '34%', label: 'Hardware' },
+    { value: '26%', label: 'Theory' },
   ],
   countries: [
     'India', 'Egypt', 'Algeria', 'Australia', 'Bangladesh', 'Italy', 'Iran', 'Germany',
