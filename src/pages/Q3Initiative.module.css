@@ -1,0 +1,32 @@
+.block { margin-top: var(--space-5); }
+.block h2 { font-size: 2.4rem; color: var(--color-navy); margin-bottom: var(--space-2); }
+.equation { font-size: 2rem; font-weight: 600; color: var(--color-navy); margin: var(--space-3) 0; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-3); }
+.card { border: 1px solid var(--color-border); border-radius: 12px; padding: var(--space-3); background: var(--color-bg-alt); }
+.card strong { display: block; font-size: 2.2rem; color: var(--color-navy); }
+.card span { color: var(--color-ink-soft); font-size: 1.5rem; }
+.timeline { list-style: none; padding: 0; border-left: 3px solid var(--color-teal); }
+.timeline li { padding: 0 0 var(--space-3) var(--space-3); font-size: 1.6rem; color: var(--color-ink-soft); }
+.timeline time { display: block; font-weight: 600; color: var(--color-ink); }
+.list { columns: 2 260px; font-size: 1.6rem; color: var(--color-ink-soft); padding-left: 2rem; }
+.overview { display: grid; gap: var(--space-2); font-size: 1.6rem; margin-top: var(--space-3); max-width: 80ch; }
+.overview div { display: grid; grid-template-columns: 11rem 1fr; gap: var(--space-2); }
+.overview dt { font-weight: 600; color: var(--color-navy); }
+.overview dd { margin: 0; color: var(--color-ink-soft); }
+.card strong.small { font-size: 1.8rem; }
+.note { margin-top: var(--space-3); font-size: 1.5rem; color: var(--color-ink-soft); max-width: 80ch; }
+@media (max-width: 600px) { .overview div { grid-template-columns: 1fr; gap: 0; } }
+.layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: var(--space-5); align-items: start; }
+.main { min-width: 0; }
+.aside { height: 100%; }
+.sticky { position: sticky; top: 96px; }
+.video { width: 100%; aspect-ratio: 9 / 16; border-radius: 16px; background: var(--color-void); display: block; box-shadow: 0 10px 30px rgb(5 14 38 / 18%); }
+.caption { margin-top: var(--space-1); font-size: 1.4rem; color: var(--color-ink-soft); text-align: center; }
+.photo { margin: var(--space-5) 0 0; }
+.photo img { width: 100%; height: auto; border-radius: 16px; display: block; }
+.photo figcaption { margin-top: var(--space-1); font-size: 1.4rem; color: var(--color-ink-soft); }
+@media (max-width: 960px) {
+  .layout { grid-template-columns: 1fr; }
+  .aside { max-width: 320px; margin: 0 auto; }
+  .sticky { position: static; }
+}

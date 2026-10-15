@@ -12,6 +12,7 @@ import bhaskarKrishnamachari from '../assets/speakers/bhaskar-krishnamachari.jpg
 import catherinePotts from '../assets/speakers/catherine-potts.jpg';
 import florentaTeodoridis from '../assets/speakers/florenta-teodoridis.jpg';
 import rosaDiFelice from '../assets/speakers/rosa-di-felice.jpg';
+import sophyShin from '../assets/speakers/sophy-shin.jpg';
 import serenaGodwin from '../assets/speakers/serena-godwin.jpg';
 import thaddeusLadd from '../assets/speakers/thaddeus-ladd.jpg';
 
@@ -21,7 +22,7 @@ const speakers = [
     title: 'IBM Research',
     kind: 'keynote',
     roleLabel: 'Keynote Speaker & Panelist',
-    photo: null,
+    photo: sophyShin,
     bio: [
       'My unique career path has taken me from space engineering and computational physics to a Ph.D. in quantum algorithms, a journey I proudly navigated after a seven-year career break to raise my two sons as a home-stay mom. This diverse background gives me a rare ability to bridge different technical domains and rapidly master new technologies.',
       'As a Quantum Strategist at IBM, I now channel this expertise into education and workforce development. I focus on creating impactful educational content and building educational strategies with North American universities to grow the quantum ecosystem.',
@@ -84,7 +85,10 @@ const speakers = [
     title: 'USC',
     kind: 'panelist',
     photo: bhaskarKrishnamachari,
-    bio: [],
+    bio: [
+      'Bhaskar Krishnamachari is a Professor of Electrical and Computer Engineering, with a joint appointment in Computer Science, at the USC Viterbi School of Engineering, where he holds the Ming Hsieh Faculty Fellowship. He co-directs the Ming Hsieh Institute and directs the Autonomous Networks Research Group. He earned his B.E. from The Cooper Union and his M.S. and Ph.D. in Electrical Engineering from Cornell University, and has been on the USC faculty since 2002.',
+      'His research spans next-generation wireless networks, the Internet of Things, distributed systems, blockchain, and artificial intelligence, from theoretical algorithm design to working prototypes. He has co-authored more than 300 technical articles and the textbook Networking Wireless Sensors. An IEEE Fellow, he has also been named to MIT Technology Review\'s TR-35 and Popular Science\'s "Brilliant 10."',
+    ],
   },
   {
     name: 'Catherine Potts',
