@@ -2,6 +2,7 @@ import Container from '../components/ui/Container';
 import SectionHeading from '../components/ui/SectionHeading';
 import Sponsors from '../components/home/Sponsors';
 import q3 from '../content/q3';
+import collage from '../assets/q3-collage.jpg';
 import styles from './events/EventPage.module.css';
 import own from './Q3Initiative.module.css';
 
@@ -15,7 +16,9 @@ const Q3Initiative = () => (
           title="Q³ Initiative"
           subtitle="A year-long quantum education initiative uniting science, ethics, and art."
         />
-        <p className={own.equation}>Q³ = ⟨ Science | Ethics | Art ⟩</p>
+        <div className={own.layout}>
+          <div className={own.main}>
+            <p className={own.equation}>Q³ = ⟨ Science | Ethics | Art ⟩</p>
 
         <dl className={own.overview}>
           {q3.overview.map((o) => (
@@ -33,6 +36,15 @@ const Q3Initiative = () => (
             ))}
           </div>
         </div>
+
+        <figure className={own.photo}>
+          <img
+            src={collage}
+            alt="Qompute 2025: panel discussion, swag table, winning teams on stage, the networking dinner, and organizers announcing winners"
+            loading="lazy"
+          />
+          <figcaption>Moments from Qompute 2025 at USC.</figcaption>
+        </figure>
 
         <div className={own.block}>
           <h2>About the initiative</h2>
@@ -89,6 +101,26 @@ const Q3Initiative = () => (
         <div className={own.block}>
           <h2>Qompute 2025 speakers</h2>
           <ul className={own.list}>{q3.speakers2025.map((n) => <li key={n}>{n}</li>)}</ul>
+        </div>
+          </div>
+          <aside className={own.aside} aria-label="Q³ lab tours recap video">
+            <div className={own.sticky}>
+              <video
+                className={own.video}
+                src={`${import.meta.env.BASE_URL}media/q3-lab-tours.mp4`}
+                poster={`${import.meta.env.BASE_URL}media/q3-lab-tours-poster.jpg`}
+                autoPlay
+                muted
+                loop
+                playsInline
+                controls
+                preload="metadata"
+              >
+                <track kind="captions" />
+              </video>
+              <p className={own.caption}>Q³ Hackathon Launch Event and lab tours</p>
+            </div>
+          </aside>
         </div>
       </Container>
     </section>
