@@ -12,6 +12,7 @@ import bhaskarKrishnamachari from '../assets/speakers/bhaskar-krishnamachari.jpg
 import catherinePotts from '../assets/speakers/catherine-potts.jpg';
 import florentaTeodoridis from '../assets/speakers/florenta-teodoridis.jpg';
 import rosaDiFelice from '../assets/speakers/rosa-di-felice.jpg';
+import sophyShin from '../assets/speakers/sophy-shin.jpg';
 import serenaGodwin from '../assets/speakers/serena-godwin.jpg';
 import thaddeusLadd from '../assets/speakers/thaddeus-ladd.jpg';
 
@@ -21,7 +22,7 @@ const speakers = [
     title: 'IBM Research',
     kind: 'keynote',
     roleLabel: 'Keynote Speaker & Panelist',
-    photo: null,
+    photo: sophyShin,
     bio: [
       'My unique career path has taken me from space engineering and computational physics to a Ph.D. in quantum algorithms, a journey I proudly navigated after a seven-year career break to raise my two sons as a home-stay mom. This diverse background gives me a rare ability to bridge different technical domains and rapidly master new technologies.',
       'As a Quantum Strategist at IBM, I now channel this expertise into education and workforce development. I focus on creating impactful educational content and building educational strategies with North American universities to grow the quantum ecosystem.',

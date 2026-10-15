@@ -6,6 +6,7 @@
 //   photo : import a headshot from src/assets/judges/, or null for the placeholder
 // TODO: add headshots as judges send them.
 import catherinePotts from '../assets/speakers/catherine-potts.jpg';
+import sophyShin from '../assets/speakers/sophy-shin.jpg';
 import sadmanAhmedShanto from '../assets/judges/sadman-ahmed-shanto.jpg';
 
 import speakers from './speakers';
@@ -32,7 +33,7 @@ const judges = [
     name: 'Jeanie Qi', role: null, org: 'USC', photo: null, bio: [],
   },
   {
-    name: 'Sophy Shin', role: null, org: 'IBM Research', photo: null, bio: bioOf('Sophy Shin'),
+    name: 'Sophy Shin', role: null, org: 'IBM Research', photo: sophyShin, bio: bioOf('Sophy Shin'),
   },
   {
     name: 'Faustin Carter',
