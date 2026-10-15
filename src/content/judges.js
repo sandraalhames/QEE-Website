@@ -7,6 +7,7 @@
 // TODO: add headshots as judges send them.
 import catherinePotts from '../assets/speakers/catherine-potts.jpg';
 import sophyShin from '../assets/speakers/sophy-shin.jpg';
+import jeanieQi from '../assets/judges/jeanie-qi.jpg';
 import sadmanAhmedShanto from '../assets/judges/sadman-ahmed-shanto.jpg';
 
 import speakers from './speakers';
@@ -30,7 +31,14 @@ const judges = [
     ],
   },
   {
-    name: 'Jeanie Qi', role: null, org: 'USC', photo: null, bio: [],
+    name: 'Jeanie Qi',
+    role: null,
+    org: 'USC',
+    photo: jeanieQi,
+    bio: [
+      'Jeanie Qi is a first year Ph.D. student in Physics at the University of Southern California, where she works on developing quantum algorithms for molecular dynamics and recently joined a project in cancer drug discovery. Jeanie earned a B.S.E in Engineering Physics from the University of Michigan, with minors in Electrical Engineering and Computer Science.',
+      'As an undergraduate, she conducted quantum algorithm research at Michigan and Lawrence Livermore National Laboratory on problems including the neutron transport equation and Burgers\' equation. She also hosted the University of Michigan\'s QuantUM Hackathon twice as part of IBM\'s Qiskit Fall Fest.',
+    ],
   },
   {
     name: 'Sophy Shin', role: null, org: 'IBM Research', photo: sophyShin, bio: bioOf('Sophy Shin'),
